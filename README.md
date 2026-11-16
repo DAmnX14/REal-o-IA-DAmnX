@@ -37,10 +37,11 @@ el juego explica la clasificación verdadera, el contexto y la procedencia docum
 | Modo aprendizaje | Sin reloj, guía de observación y explicaciones ampliadas. No afecta el ranking. |
 | Dificultad | Mixta, Fácil, Intermedio o Difícil. |
 | Mecánica | Imagen grande, botones REAL / GENERADA POR IA (también teclas `R` / `I`), temporizador circular, barra de tiempo y de progreso, puntaje, número de pregunta, racha y nombre del jugador. Cada pregunta se responde **una sola vez**. Al agotarse el tiempo: no respondida, 0 puntos, se muestra la respuesta y la explicación. |
-| Devolución | CORRECTO / INCORRECTO / TIEMPO AGOTADO, clasificación verdadera, explicación específica de esa imagen, contexto, características a observar, consejos, autor, fuente, licencia y herramienta de IA. Botón CONTINUAR. |
+| Devolución | Pantalla compacta y animada (ícono que se dibuja, sello REAL / IA, puntos ganados) con la explicación principal a la vista y el resto en pestañas: qué observar, consejos, contexto y procedencia. Incluye CORRECTO / INCORRECTO / TIEMPO AGOTADO, clasificación verdadera, explicación específica de esa imagen, contexto, características a observar, consejos, autor, fuente, licencia y herramienta de IA. Botón CONTINUAR. |
 | Resultados | Puntaje, correctas, incorrectas, sin responder, % de aciertos, tiempo promedio, mejor racha, duración, calificación, posición en el ranking, revisión de todas las imágenes. Volver a jugar / Ver ranking / Volver al inicio. Celebración con confeti. |
 | Ranking | Global (Supabase), por modo, mejor partida de cada jugador, orden por puntaje → % aciertos → menor tiempo promedio, oro/plata/bronce, buscador, paginación y actualización automática cada 20 s. |
 | Estadísticas | Partidas, jugadores, puntaje promedio, % de aciertos (general, IA y reales), distribución de respuestas (gráfico circular), aciertos por categoría (barras), evolución diaria (línea), preguntas con más errores e imágenes que más confunden. Gráficos interactivos con tooltip y tabla accesible. |
+| Música | Tema de inicio y música de suspenso durante la partida (más intensa en los últimos 5 segundos), generadas en tiempo real con Web Audio API (sin archivos ni licencias). Se baja el volumen mientras se lee la explicación. Botón 🎵 para activarla o desactivarla. |
 | Efectos | Sonidos sintetizados (sin archivos) desactivables, cuenta regresiva sonora, animaciones de acierto/error, puntos flotantes, banner de racha, transiciones y confeti. Respeta `prefers-reduced-motion`. |
 | Responsive | Diseñado y probado en escritorio y celular. |
 
@@ -86,6 +87,7 @@ REAL-OR-AI/
 │   ├── charts.js              Gráficos SVG interactivos (sin dependencias)
 │   ├── effects.js             Confeti, puntos flotantes, contadores
 │   ├── sound.js               Sonidos con Web Audio API
+│   ├── music.js               Música de inicio y de suspenso (Web Audio API)
 │   ├── storage.js             Preferencias locales (nombre, sonido, dificultad)
 │   ├── utils.js               Validación, sanitización, formato
 │   ├── admin.js               Lógica del panel
@@ -316,6 +318,8 @@ identificación de jugadores es anónima (sin cuentas), por lo que nadie es «du
 ---
 
 ## Créditos y licencias
+
+- © 2026 ArceTech® · Todos los derechos reservados.
 
 - Código: MIT.
 - Imágenes: cada una conserva su licencia original; autor, fuente y licencia se muestran tras cada

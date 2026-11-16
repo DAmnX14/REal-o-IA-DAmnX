@@ -43,3 +43,27 @@
   *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
   .scanline { display: none; }
 }
+
+/* ---------- v1.1: animaciones de la explicación ---------- */
+@keyframes popIn { 0% { opacity: 0; transform: scale(.6); } 70% { transform: scale(1.12); } 100% { opacity: 1; transform: scale(1); } }
+@keyframes drawStroke { from { stroke-dashoffset: 160; } to { stroke-dashoffset: 0; } }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes stampIn { 0% { opacity: 0; transform: rotate(-6deg) scale(2.4); } 60% { opacity: 1; transform: rotate(-6deg) scale(.92); } 100% { transform: rotate(-6deg) scale(1); } }
+@keyframes wobble { 0%, 100% { transform: rotate(0); } 25% { transform: rotate(-8deg); } 75% { transform: rotate(8deg); } }
+@keyframes scanReveal { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0 0 0 0); } }
+
+.feedback.open .fb-icon svg { animation: popIn .5s cubic-bezier(.2, .9, .3, 1.3) both; }
+.feedback.open .fb-icon svg path, .feedback.open .fb-icon svg circle { stroke-dasharray: 160; animation: drawStroke .7s .15s ease-out both; }
+.feedback.open .fb-hero.bad .fb-icon { animation: wobble .5s .5s ease; }
+.feedback.open .fb-total { animation: popIn .6s .35s cubic-bezier(.2, .9, .3, 1.3) both; }
+.feedback.open .fb-image img { animation: scanReveal .7s .1s ease-out both; }
+.feedback.open .stamp { animation: stampIn .55s .6s cubic-bezier(.2, .9, .3, 1.2) both; }
+.feedback.open .fb-summary > * { animation: fadeUp .45s ease both; }
+.feedback.open .fb-summary > :nth-child(1) { animation-delay: .2s; }
+.feedback.open .fb-summary > :nth-child(2) { animation-delay: .3s; }
+.feedback.open .fb-summary > :nth-child(3) { animation-delay: .4s; }
+.feedback.open .fb-summary > :nth-child(4) { animation-delay: .5s; }
+.feedback.open .fb-tabs { animation: fadeUp .45s .5s ease both; }
+.fb-panel:not([hidden]) { animation: fadeUp .35s ease both; }
+.fb-panel:not([hidden]) .fb-list li { animation: fadeUp .35s calc(var(--i, 0) * 70ms + 80ms) ease both; }
+.stage.enter::before { animation: enter .45s ease both; }

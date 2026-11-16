@@ -81,6 +81,7 @@ try {
   check(await page.textContent('#conn-status').then((t) => (ONLINE ? /En línea/ : /Modo local/).test(t)), 'indicador de conexión correcto');
   check(await page.locator('#intro-stack img').count() >= 6, 'animación de introducción con imágenes');
   check(await page.isVisible('text=¿Podés distinguir lo real de lo artificial?'), 'eslogan visible');
+  check(/ArceTech®/.test((await page.textContent('.site-footer')).replace(/\s+/g, '')), 'marca ArceTech® en el pie');
   await page.waitForTimeout(800);
   await page.screenshot({ path: `${SHOTS}01-inicio.png` });
 
@@ -96,6 +97,7 @@ try {
   }
   await page.fill('#player-name', 'x'.repeat(25));
   check((await page.inputValue('#player-name')).length === 20, 'el campo limita a 20 caracteres');
+  check(await page.evaluate(() => window.__REALORAI__.music.track) === 'menu', 'música de inicio sonando tras el primer clic');
   await page.fill('#player-name', 'Tester E2E');
   await page.click('#name-form button[type=submit]');
   await page.waitForSelector('#screen-mode:not([hidden])');
@@ -110,6 +112,14 @@ try {
   const t0 = Number(await page.textContent('#hud-timer-text'));
   check(t0 >= 14 && t0 <= 15, `temporizador arranca en 15 (${t0})`);
   check(await page.evaluate(() => document.querySelector('#q-image').naturalWidth > 0), 'la imagen carga');
+  check(await page.evaluate(() => {
+    const s = document.querySelector('#stage').getBoundingClientRect(); const i = document.querySelector('#q-image');
+    const k = Math.min(i.clientWidth / i.naturalWidth, i.clientHeight / i.naturalHeight); // object-fit: contain
+    const w = i.naturalWidth * k, h = i.naturalHeight * k;
+    return w <= s.width + 1 && h <= s.height + 1;
+  }), 'la imagen entra completa en el recuadro');
+  check(await page.isVisible('#btn-music'), 'botón de música visible');
+  check(await page.evaluate(() => window.__REALORAI__.music.track) === 'suspense', 'música de suspenso durante la partida');
   await page.waitForTimeout(700);
   await page.screenshot({ path: `${SHOTS}03-juego.png` });
 
@@ -148,9 +158,13 @@ try {
     check(answered === i + 1, `una sola respuesta registrada (${answered})`);
     if (i === 0) {
       const fb = await page.textContent('#feedback-body');
-      check(/FOTOGRAFÍA REAL|IMAGEN GENERADA POR IA/.test(fb), 'devolución muestra la clasificación verdadera');
+      check(/FOTOGRAFÍA REAL|GENERADA POR IA/.test(fb), 'devolución muestra la clasificación verdadera');
       check(/Contexto/.test(fb) && /Procedencia documentada/.test(fb) && /Licencia/.test(fb), 'devolución con contexto y procedencia');
-      check(await page.locator('.fb-cols li').count() >= 4, 'características y consejos listados');
+      check(await page.locator('.fb-list li').count() >= 4, 'características y consejos listados');
+      check(await page.locator('.fb-panel:not([hidden])').count() === 1, 'explicación compacta: una sola sección visible a la vez');
+      await page.click('#fbt-tips');
+      check(await page.isVisible('#fbp-tips') && !(await page.isVisible('#fbp-observe')), 'pestañas de la explicación funcionan');
+      await page.waitForTimeout(900);
       check(/\+50 bonus por rapidez/.test(fb), 'bonus por rapidez mostrado');
       await page.screenshot({ path: `${SHOTS}04-devolucion.png` });
     }

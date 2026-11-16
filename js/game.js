@@ -8,6 +8,7 @@ import { Countdown, Stopwatch } from './timer.js';
 import { RULES, rating } from './scoring.js';
 import { sound } from './sound.js';
 import { confetti, floatText, countUp, pulse } from './effects.js';
+import { music } from './music.js';
 import {
   $, el, escapeHtml, formatSeconds, formatDuration, formatPercent, preloadImage,
   CATEGORY_LABELS, DIFFICULTY_LABELS, MODE_LABELS, sleep,
@@ -130,6 +131,7 @@ export class GameController {
       return;
     }
     img.src = q.imageUrl;
+    stage.style.setProperty('--bg', `url("${q.imageUrl.replace(/"/g, '%22')}")`);
     img.alt = `Imagen ${q.position}: ¿fotografía real o generada por inteligencia artificial?`;
     pulse(stage, 'enter');
     if (q.nextImageUrl) preloadImage(q.nextImageUrl);
@@ -253,61 +255,87 @@ export class GameController {
   _renderFeedback(r) {
     const q = r.question;
     const st = this.state;
-    const verdict = r.correct === true ? 'CORRECTO' : r.correct === false ? 'INCORRECTO' : 'TIEMPO AGOTADO';
-    const vClass = r.correct === true ? 'good' : r.correct === false ? 'bad' : 'warn';
-    const truth = r.isAi ? 'IMAGEN GENERADA POR IA' : 'FOTOGRAFÍA REAL';
-    const you = r.choice == null ? 'No respondiste a tiempo' : `Respondiste: ${r.choice === 'ai' ? 'Generada por IA' : 'Real'}`;
-    const pts = [];
-    if (r.points.base) pts.push(`<li>+${r.points.base} respuesta correcta</li>`);
-    if (r.points.speed) pts.push(`<li>+${r.points.speed} bonus por rapidez</li>`);
-    if (r.points.streak) pts.push(`<li>+${r.points.streak} bonus por racha de ${r.streak}</li>`);
-    const list = (items) => items.map((t) => `<li>${escapeHtml(t)}</li>`).join('');
+    const kind = r.correct === true ? 'good' : r.correct === false ? 'bad' : 'warn';
+    const verdict = { good: '¡CORRECTO!', bad: 'INCORRECTO', warn: 'TIEMPO AGOTADO' }[kind];
+    const truth = r.isAi ? 'GENERADA POR IA' : 'FOTOGRAFÍA REAL';
+    const sub = r.choice == null
+      ? `No respondiste a tiempo · era ${r.isAi ? 'una imagen generada por IA' : 'una fotografía real'}`
+      : `Respondiste ${r.choice === 'ai' ? '«Generada por IA»' : '«Real»'} en ${formatSeconds(r.elapsedMs)}`;
+    const icon = {
+      good: '<svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M15 27l7 7 15-16"/></svg>',
+      bad: '<svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M18 18l16 16M34 18L18 34"/></svg>',
+      warn: '<svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="23"/><path d="M26 14v13l8 5"/></svg>',
+    }[kind];
+    const chips = [];
+    if (r.points.base) chips.push(`<span class="chip">+${r.points.base} respuesta correcta</span>`);
+    if (r.points.speed) chips.push(`<span class="chip speed">+${r.points.speed} bonus por rapidez</span>`);
+    if (r.points.streak) chips.push(`<span class="chip streak">+${r.points.streak} bonus por racha de ${r.streak}</span>`);
+    const list = (items) => items.map((t, i) => `<li style="--i:${i}">${escapeHtml(t)}</li>`).join('');
     const link = (url, text) => url ? `<a href="${escapeHtml(url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(text)}</a>` : escapeHtml(text);
-    const provenance = r.isAi
-      ? `<dl class="prov">
-          <dt>Herramienta</dt><dd>${escapeHtml(q.ai_tool || 'No especificada por el autor')}</dd>
-          <dt>Fuente</dt><dd>${link(q.source_url, q.source)}</dd>
-          ${q.author ? `<dt>Autor / generador</dt><dd>${escapeHtml(q.author)}</dd>` : ''}
-          <dt>Licencia</dt><dd>${link(q.license_url, q.license)}</dd>
-        </dl>`
-      : `<dl class="prov">
-          <dt>Autor</dt><dd>${escapeHtml(q.author || '—')}</dd>
-          <dt>Fuente</dt><dd>${link(q.source_url, q.source)}</dd>
-          <dt>Licencia</dt><dd>${link(q.license_url, q.license)}</dd>
-        </dl>`;
-
+    const prov = `<dl class="prov">
+        ${r.isAi ? `<dt>Herramienta</dt><dd>${escapeHtml(q.ai_tool || 'No especificada por el autor')}</dd>` : ''}
+        <dt>${r.isAi ? 'Autor / generador' : 'Autor'}</dt><dd>${escapeHtml(q.author || '—')}</dd>
+        <dt>Fuente</dt><dd>${link(q.source_url, q.source)}</dd>
+        <dt>Licencia</dt><dd>${link(q.license_url, q.license)}</dd>
+      </dl>`;
+    const tabs = [
+      ['observe', '🔍', r.isAi ? 'Qué la delata' : 'Por qué es real', `<ul class="fb-list">${list(q.features)}</ul>`],
+      ['tips', '💡', 'Consejos', `<ul class="fb-list">${list(q.tips)}</ul>`],
+      ['context', '📍', 'Contexto', `<p>${escapeHtml(q.context)}</p>`],
+      ['source', '📄', 'Procedencia documentada', prov],
+    ];
+    const safeImg = escapeHtml(q.image_url);
     $('#feedback-body').innerHTML = `
-      <div class="fb-head ${vClass}">
-        <div class="fb-verdict">${verdict}</div>
-        <div class="fb-you">${escapeHtml(you)} · ${formatSeconds(r.elapsedMs)}</div>
-      </div>
-      <div class="fb-grid">
-        <figure class="fb-image">
-          <img src="${escapeHtml(q.image_url)}" alt="${escapeHtml(q.title)}">
-          <figcaption class="badge ${r.isAi ? 'badge-ai' : 'badge-real'}">${truth}</figcaption>
+      <header class="fb-hero ${kind}">
+        <div class="fb-icon">${icon}</div>
+        <div class="fb-hero-text">
+          <div class="fb-verdict">${verdict}</div>
+          <div class="fb-you">${escapeHtml(sub)}</div>
+        </div>
+        <div class="fb-total ${r.points.total ? '' : 'zero'}">+${r.points.total}<small>puntos</small></div>
+      </header>
+      <div class="fb-main">
+        <figure class="fb-image" style="--bg:url('${safeImg}')">
+          <img src="${safeImg}" alt="${escapeHtml(q.title)}">
+          <figcaption class="stamp ${r.isAi ? 'stamp-ai' : 'stamp-real'}">${truth}</figcaption>
         </figure>
-        <div class="fb-text">
+        <div class="fb-summary">
           <h3>${escapeHtml(q.title)}</h3>
           <p class="fb-explanation">${escapeHtml(q.explanation)}</p>
-          <h4>Contexto</h4>
-          <p>${escapeHtml(q.context)}</p>
-          ${pts.length ? `<ul class="fb-points">${pts.join('')}</ul>` : '<p class="fb-nopoints">Sin puntos en esta imagen.</p>'}
+          ${chips.length ? `<div class="fb-chips">${chips.join('')}</div>` : ''}
+          ${st.mode === 'learning' ? `<p class="fb-learn">🎓 Los detalles visuales ayudan a sospechar, pero no son una prueba: lo que confirma el origen es la procedencia documentada.</p>` : ''}
         </div>
       </div>
-      <div class="fb-cols">
-        <section><h4>${r.isAi ? 'Características que delatan su origen' : 'Detalles que muestran que es real'}</h4><ul>${list(q.features)}</ul></section>
-        <section><h4>Consejos para imágenes similares</h4><ul>${list(q.tips)}</ul></section>
-      </div>
-      <section class="fb-prov"><h4>Procedencia documentada</h4>${provenance}</section>
-      ${st.mode === 'learning' ? `<section class="fb-learn"><h4>Recordá: la clasificación se basa en la procedencia</h4>
-        <p>Los detalles visuales ayudan a sospechar, pero no son una prueba. Una foto real puede tener reflejos raros
-        o edición, y una imagen de IA puede no tener ningún error visible. Lo que confirma el origen es la fuente documentada.</p></section>` : ''}
+      <nav class="fb-tabs" role="tablist" aria-label="Más información">
+        ${tabs.map(([id, ico, label], i) => `<button type="button" role="tab" id="fbt-${id}" aria-controls="fbp-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"><span aria-hidden="true">${ico}</span> ${label}</button>`).join('')}
+      </nav>
+      ${tabs.map(([id, , label, html], i) => `<section class="fb-panel" role="tabpanel" id="fbp-${id}" aria-labelledby="fbt-${id}" ${i === 0 ? '' : 'hidden'}><h4 class="sr-only">${label}</h4>${html}</section>`).join('')}
     `;
+    const tabBtns = [...document.querySelectorAll('.fb-tabs [role=tab]')];
+    const select = (btn) => {
+      for (const b of tabBtns) {
+        const on = b === btn;
+        b.setAttribute('aria-selected', String(on));
+        b.tabIndex = on ? 0 : -1;
+        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
+      }
+    };
+    tabBtns.forEach((b, i) => {
+      b.addEventListener('click', () => select(b));
+      b.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          e.preventDefault();
+          const n = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : tabBtns.length - 1)) % tabBtns.length];
+          select(n); n.focus();
+        }
+      });
+    });
     const isLast = st.total && st.answered >= st.total;
     $('#btn-continue').textContent = isLast ? 'VER RESULTADOS' : 'CONTINUAR';
     const fb = $('#feedback');
     fb.hidden = false;
     fb.scrollTop = 0;
+    music.duck(true);
     requestAnimationFrame(() => fb.classList.add('open'));
     setTimeout(() => $('#btn-continue').focus({ preventScroll: true }), 50);
   }
@@ -325,6 +353,7 @@ export class GameController {
   _closeFeedback() {
     const fb = $('#feedback');
     fb.classList.remove('open');
+    music.duck(false);
     fb.hidden = true;
   }
 
@@ -374,6 +403,9 @@ export class GameController {
   }
 
   _setTimerDisplay(remMs, fraction) {
+    // El suspenso crece a medida que se acaba el tiempo
+    if (remMs != null) music.setIntensity(remMs <= 5000 ? 1 : 0.15 + (1 - fraction) * 0.4);
+    else music.setIntensity(0);
     const txt = $('#hud-timer-text');
     const ring = $('#hud-timer-ring');
     const bar = $('#hud-timebar-fill');

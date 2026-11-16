@@ -70,3 +70,15 @@
   .answer-btn kbd { display: none; }
 }
 @media (max-width: 860px) { .result-stats .stat:last-child { grid-column: span 2; } }
+
+/* v1.1 */
+@media (max-width: 760px) {
+  .fb-main { grid-template-columns: 1fr; padding: 14px 14px 4px; gap: 14px; }
+  .fb-hero { padding: 14px; gap: 12px; }
+  .fb-icon svg { width: 44px; height: 44px; }
+  .fb-total { font-size: 1.5rem; }
+  .fb-tabs { padding: 12px 14px 0; }
+  .fb-panel { margin: 0 14px 12px; }
+  .fb-image { aspect-ratio: 16 / 10; }
+  .feedback-actions { padding: 6px 14px 16px; }
+}

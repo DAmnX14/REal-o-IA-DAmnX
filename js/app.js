@@ -7,6 +7,7 @@ import { GameController, renderResults } from './game.js';
 import { RankingView } from './ranking.js';
 import { loadStats } from './statistics.js';
 import { sound } from './sound.js';
+import { music } from './music.js';
 import { storage } from './storage.js';
 import { RULES } from './scoring.js';
 import { $, $$, el, escapeHtml, validateName, shuffle, resolveImageUrl, NAME_MAX, MODE_LABELS, DIFFICULTY_LABELS } from './utils.js';
@@ -43,6 +44,7 @@ function show(name, { push = true } = {}) {
     s.classList.toggle('active', active);
   });
   document.body.dataset.screen = name;
+  music.play(name === 'game' ? 'suspense' : 'menu');
   app.screen = name;
   if (name !== 'home') intro.stop(); else intro.start();
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
@@ -226,7 +228,9 @@ async function loadCredits() {
 const ranking = new RankingView(getBackend);
 
 function bindGlobal() {
-  document.addEventListener('pointerdown', () => sound.unlock(), { once: true });
+  const unlockAudio = () => { sound.unlock(); music.unlock(); };
+  document.addEventListener('pointerdown', unlockAudio, { once: true });
+  document.addEventListener('keydown', unlockAudio, { once: true });
   $$('[data-go]').forEach((b) => b.addEventListener('click', (e) => {
     e.preventDefault();
     sound.play('click');
@@ -242,6 +246,14 @@ function bindGlobal() {
   };
   st.addEventListener('click', () => { sound.toggle(); paint(); sound.play('click'); });
   paint();
+  const mb = $('#btn-music');
+  const paintMusic = () => {
+    mb.setAttribute('aria-pressed', String(music.enabled));
+    mb.title = music.enabled ? 'Desactivar música' : 'Activar música';
+    mb.classList.toggle('off', !music.enabled);
+  };
+  mb.addEventListener('click', () => { music.toggle(); paintMusic(); });
+  paintMusic();
 
   $('#btn-play-again').addEventListener('click', () => startGame(app.lastGame || { mode: 'classic', difficulty: 'mixed' }));
   $('#btn-results-ranking').addEventListener('click', () => {
@@ -296,4 +308,4 @@ async function init() {
 init();
 
 // Exposición mínima para pruebas automatizadas (no afecta al juego).
-window.__REALORAI__ = { app, getBackend, MODE_LABELS, DIFFICULTY_LABELS };
+window.__REALORAI__ = { app, getBackend, music, MODE_LABELS, DIFFICULTY_LABELS };
