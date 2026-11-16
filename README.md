@@ -1,6 +1,6 @@
 # REAL OR AI – ¿Podés distinguir lo real de lo artificial?
 
-Videojuego web educativo y competitivo: en cada ronda aparece una imagen y hay que decidir si es una
+Proyecto del **IES N° 10 · Jujuy**. Videojuego web educativo y competitivo: en cada ronda aparece una imagen y hay que decidir si es una
 **fotografía real** o una imagen **generada por inteligencia artificial**. Después de cada respuesta,
 el juego explica la clasificación verdadera, el contexto y la procedencia documentada de la imagen.
 
@@ -321,6 +321,7 @@ identificación de jugadores es anónima (sin cuentas), por lo que nadie es «du
 ## Créditos y licencias
 
 - © 2026 ArceTech® · Todos los derechos reservados.
+- Logo e identidad visual (azul `#004080` y dorado `#F2C230`) del IES N° 10 Jujuy, usados con autorización del proyecto (`assets/icons/ies10.png`).
 
 - Código: MIT.
 - Imágenes: cada una conserva su licencia original; autor, fuente y licencia se muestran tras cada

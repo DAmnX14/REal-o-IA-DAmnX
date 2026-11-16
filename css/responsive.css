@@ -87,3 +87,11 @@
   .bg-floor { height: 40vh; }
   .btn-next { min-width: 0; width: 100%; }
 }
+/* v1.3: barra superior en celular (con el logo del IES) */
+.brand span { white-space: nowrap; }
+@media (max-width: 560px) {
+  .brand span { display: none; }
+  .ies-chip { margin-left: 6px; }
+  .topbar-right { gap: 6px; }
+  .topbar .icon-btn { width: 36px; height: 36px; }
+}

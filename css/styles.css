@@ -572,3 +572,38 @@ body[data-screen="game"] .site-footer { display: none; }
 .fb-image figcaption.stamp { left: auto; right: 12px; bottom: 14px; white-space: nowrap; }
 /* Los botones no seleccionan texto al tocarlos dos veces */
 .btn, .answer-btn, .icon-btn, .tabs button, .mode-card, .segmented span { user-select: none; -webkit-user-select: none; }
+
+/* =====================================================================
+   v1.3 — Identidad del IES N° 10 Jujuy (azul y dorado del logo)
+   ===================================================================== */
+:root {
+  --ies-blue: #004080;
+  --ies-blue-2: #1a6fd1;
+  --ies-gold: #f2c230;
+  --ies-gold-2: #d8a818;
+  --ies-cream: #f0f090;
+  --grad: linear-gradient(135deg, #8b5cf6 0%, #1a6fd1 45%, #22d3ee 75%, #f2c230 100%);
+}
+.topbar { border-bottom: 1px solid rgba(242, 194, 48, .25); box-shadow: 0 1px 0 rgba(0, 64, 128, .6); }
+.ies-chip {
+  display: flex; align-items: center; gap: 8px; margin-right: auto; margin-left: 14px; padding: 3px 12px 3px 3px;
+  border-radius: 999px; text-decoration: none; color: var(--ies-gold); font: 700 .8rem var(--font-display); letter-spacing: .04em;
+  background: linear-gradient(90deg, rgba(0, 64, 128, .75), rgba(0, 64, 128, .25)); border: 1px solid rgba(242, 194, 48, .45);
+}
+.ies-chip img { width: 30px; height: 30px; border-radius: 50%; filter: drop-shadow(0 0 6px rgba(242, 194, 48, .5)); }
+.ies-badge {
+  display: inline-flex; align-items: center; gap: 12px; margin-bottom: 14px; padding: 6px 18px 6px 6px; border-radius: 999px;
+  background: linear-gradient(90deg, rgba(0, 64, 128, .85), rgba(0, 64, 128, .2)); border: 1px solid rgba(242, 194, 48, .55);
+  box-shadow: 0 0 30px rgba(0, 64, 128, .6); color: #e8ecff; font-size: .95rem;
+}
+.ies-badge img { width: 56px; height: 56px; border-radius: 50%; filter: drop-shadow(0 0 10px rgba(242, 194, 48, .45)); }
+.ies-badge strong { color: var(--ies-gold); }
+.kicker { color: var(--ies-gold); }
+.ies-foot { color: var(--ies-gold); font-weight: 700; }
+.logo-title span { background: linear-gradient(120deg, #22d3ee, #1a6fd1 45%, #f2c230); -webkit-background-clip: text; background-clip: text; }
+.btn-ghost:hover:not(:disabled) { border-color: var(--ies-gold); }
+.hud { border-color: rgba(26, 111, 209, .45); }
+.chip.speed { background: rgba(242, 194, 48, .12); border-color: rgba(242, 194, 48, .5); color: #fde68a; }
+.medal.gold { box-shadow: 0 0 18px rgba(242, 194, 48, .8); }
+@media (max-width: 560px) { .ies-chip span { display: none; } .ies-chip { padding: 3px; margin-left: 8px; } }
+@media (max-width: 860px) { .ies-badge { margin-left: auto; margin-right: auto; } }
