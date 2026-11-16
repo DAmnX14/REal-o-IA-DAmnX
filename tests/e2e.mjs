@@ -42,6 +42,10 @@ async function newPage(opts = {}) {
   page.on('console', (m) => { if (m.type() === 'error' && !/fonts\.(googleapis|gstatic)/.test(m.text()) && !/ERR_TUNNEL|ERR_NAME|ERR_CONNECTION/.test(m.text())) page.errors.push(m.text()); });
   // Sin acceso a Google Fonts en entornos aislados: se responde vacío (el sitio usa fuentes del sistema como respaldo).
   await page.route(/fonts\.(googleapis|gstatic)\.com/, (r) => r.fulfill({ status: 200, contentType: 'text/css', body: '' }));
+  if (!ONLINE) {
+    // Modo local: nunca tocar la base real configurada en js/config.js
+    await page.route('**/js/config.js', (r) => r.fulfill({ contentType: 'text/javascript', body: "export const CONFIG = { SUPABASE_URL: '', SUPABASE_ANON_KEY: '', OFFLINE_FALLBACK: true };" }));
+  }
   if (ONLINE) {
     await page.route('**/js/config.js', (r) => r.fulfill({
       contentType: 'text/javascript',
@@ -82,6 +86,12 @@ try {
   check(await page.locator('#intro-stack img').count() >= 6, 'animación de introducción con imágenes');
   check(await page.isVisible('text=¿Podés distinguir lo real de lo artificial?'), 'eslogan visible');
   check(/ArceTech®/.test((await page.textContent('.site-footer')).replace(/\s+/g, '')), 'marca ArceTech® en el pie');
+  check(await page.evaluate(() => getComputedStyle(document.querySelector('.bg-aurora .a1')).animationName === 'drift1' && getComputedStyle(document.querySelector('.bg-floor')).animationName === 'floorMove'), 'fondo animado activo');
+  check(await page.evaluate(() => getComputedStyle(document.querySelector('#btn-play')).animationName.includes('gradientFlow')), 'botón principal animado');
+  await page.click('#btn-motion');
+  check(await page.evaluate(() => document.body.classList.contains('reduce-motion')), 'botón ✨ apaga las animaciones');
+  await page.click('#btn-motion');
+  check(await page.evaluate(() => !document.body.classList.contains('reduce-motion')), 'botón ✨ vuelve a encenderlas');
   await page.waitForTimeout(800);
   await page.screenshot({ path: `${SHOTS}01-inicio.png` });
 
@@ -159,14 +169,17 @@ try {
     if (i === 0) {
       const fb = await page.textContent('#feedback-body');
       check(/FOTOGRAFÍA REAL|GENERADA POR IA/.test(fb), 'devolución muestra la clasificación verdadera');
-      check(/Contexto/.test(fb) && /Procedencia documentada/.test(fb) && /Licencia/.test(fb), 'devolución con contexto y procedencia');
-      check(await page.locator('.fb-list li').count() >= 4, 'características y consejos listados');
-      check(await page.locator('.fb-panel:not([hidden])').count() === 1, 'explicación compacta: una sola sección visible a la vez');
-      await page.click('#fbt-tips');
-      check(await page.isVisible('#fbp-tips') && !(await page.isVisible('#fbp-observe')), 'pestañas de la explicación funcionan');
-      await page.waitForTimeout(900);
+      check(await page.isVisible('.fb-key') && await page.locator('.fb-tabs').count() === 0, 'explicación compacta en modo clásico (sin pestañas)');
+      check(fb.length < 700, `explicación breve (${fb.length} caracteres)`);
       check(/\+50 bonus por rapidez/.test(fb), 'bonus por rapidez mostrado');
+      check(/SIGUIENTE \(\d\)/.test(await page.textContent('#btn-continue')), 'botón con cuenta regresiva para la siguiente imagen');
+      await page.waitForTimeout(1200);
       await page.screenshot({ path: `${SHOTS}04-devolucion.png` });
+      const t0 = Date.now();
+      await page.waitForFunction(() => { const s = window.__REALORAI__.app.controller.state; return s.phase === 'question' && s.current.position === 2; }, null, { timeout: 9000 });
+      const waited = Date.now() - t0 + 1200;
+      check(waited >= 4000 && waited <= 7500, `pasa sola a la siguiente imagen a los 5 s (${(waited / 1000).toFixed(1)} s)`);
+      continue;
     }
     if (i === 8) check(!/rapidez/.test(await page.textContent('#feedback-body')), 'sin bonus si quedaban ≤ 10 s');
     await page.click('#btn-continue');
@@ -226,7 +239,17 @@ try {
     if (diff !== 'hard') check(false, 'dificultad difícil respetada');
     await page.click(`#btn-${(await correctAnswer(page)) || 'real'}`);
     await page.waitForSelector('#feedback:not([hidden])');
-    if (i === 0) { check(await page.isVisible('.fb-learn'), 'aprendizaje: explicación ampliada'); await page.screenshot({ path: `${SHOTS}07-aprendizaje.png` }); }
+    if (i === 0) {
+      check(await page.isVisible('.fb-learn'), 'aprendizaje: explicación ampliada');
+      const fb = await page.textContent('#feedback-body');
+      check(/Contexto/.test(fb) && /Procedencia documentada/.test(fb) && /Licencia/.test(fb), 'aprendizaje: contexto y procedencia');
+      check(await page.locator('.fb-list li').count() >= 4, 'aprendizaje: características y consejos listados');
+      await page.click('#fbt-tips');
+      check(await page.isVisible('#fbp-tips') && !(await page.isVisible('#fbp-observe')), 'aprendizaje: pestañas funcionan');
+      await page.waitForTimeout(6000);
+      check(await page.isVisible('#feedback'), 'aprendizaje: no avanza solo (tiempo para leer)');
+      await page.screenshot({ path: `${SHOTS}07-aprendizaje.png` });
+    }
     await page.click('#btn-continue');
   }
   await page.waitForSelector('#screen-results:not([hidden])');

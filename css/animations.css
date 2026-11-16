@@ -39,10 +39,9 @@
 }
 @keyframes shine { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
-  .scanline { display: none; }
-}
+/* Animaciones reducidas: solo si la persona las apaga con el botón ✨ del juego */
+body.reduce-motion *, body.reduce-motion *::before, body.reduce-motion *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+body.reduce-motion .scanline { display: none; }
 
 /* ---------- v1.1: animaciones de la explicación ---------- */
 @keyframes popIn { 0% { opacity: 0; transform: scale(.6); } 70% { transform: scale(1.12); } 100% { opacity: 1; transform: scale(1); } }
@@ -67,3 +66,110 @@
 .fb-panel:not([hidden]) { animation: fadeUp .35s ease both; }
 .fb-panel:not([hidden]) .fb-list li { animation: fadeUp .35s calc(var(--i, 0) * 70ms + 80ms) ease both; }
 .stage.enter::before { animation: enter .45s ease both; }
+
+/* =====================================================================
+   v1.2 — Fondo animado futurista (aurora neón + grilla en movimiento)
+   ===================================================================== */
+.bg-aurora { position: fixed; inset: 0; z-index: -3; pointer-events: none; overflow: hidden; filter: saturate(1.3); }
+.bg-aurora span { position: absolute; width: 55vmax; height: 55vmax; border-radius: 50%; filter: blur(90px); opacity: .42; mix-blend-mode: screen; will-change: transform; }
+.bg-aurora .a1 { background: radial-gradient(circle, #8b5cf6, transparent 65%); top: -20vmax; left: -15vmax; animation: drift1 22s ease-in-out infinite alternate; }
+.bg-aurora .a2 { background: radial-gradient(circle, #22d3ee, transparent 65%); top: 10vmax; right: -25vmax; animation: drift2 26s ease-in-out infinite alternate; }
+.bg-aurora .a3 { background: radial-gradient(circle, #ec4899, transparent 65%); bottom: -30vmax; left: 15vmax; opacity: .3; animation: drift3 30s ease-in-out infinite alternate; }
+.bg-aurora .a4 { background: radial-gradient(circle, #3b82f6, transparent 65%); top: 30vmax; left: -20vmax; opacity: .3; animation: drift2 34s ease-in-out infinite alternate-reverse; }
+@keyframes drift1 { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(18vw, 12vh) scale(1.15); } 100% { transform: translate(6vw, 28vh) scale(.9); } }
+@keyframes drift2 { 0% { transform: translate(0, 0) scale(1); } 50% { transform: translate(-22vw, 10vh) scale(1.2); } 100% { transform: translate(-8vw, -14vh) scale(.95); } }
+@keyframes drift3 { 0% { transform: translate(0, 0) scale(1.1); } 50% { transform: translate(14vw, -18vh) scale(.9); } 100% { transform: translate(-12vw, -6vh) scale(1.2); } }
+
+/* Piso de grilla "synthwave" que avanza */
+.bg-floor {
+  position: fixed; left: -50%; right: -50%; bottom: -10vh; height: 55vh; z-index: -2; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(34, 211, 238, .35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(167, 139, 250, .35) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform: perspective(420px) rotateX(62deg);
+  transform-origin: bottom center;
+  mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .6) 40%, transparent 85%);
+  -webkit-mask-image: linear-gradient(to top, #000 0%, rgba(0, 0, 0, .6) 40%, transparent 85%);
+  animation: floorMove 3.5s linear infinite;
+  opacity: .85;
+}
+@keyframes floorMove { from { background-position: 0 0; } to { background-position: 0 60px; } }
+
+/* Estrellas que titilan */
+.bg-stars {
+  position: fixed; inset: 0; z-index: -2; pointer-events: none; opacity: .7;
+  background-image:
+    radial-gradient(1.5px 1.5px at 12% 18%, #fff, transparent), radial-gradient(1px 1px at 28% 72%, #c4b5fd, transparent),
+    radial-gradient(1.5px 1.5px at 44% 34%, #67e8f9, transparent), radial-gradient(1px 1px at 63% 12%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 78% 48%, #f0abfc, transparent), radial-gradient(1px 1px at 88% 22%, #fff, transparent),
+    radial-gradient(1px 1px at 8% 56%, #a5b4fc, transparent), radial-gradient(1.5px 1.5px at 54% 86%, #fff, transparent),
+    radial-gradient(1px 1px at 35% 8%, #67e8f9, transparent), radial-gradient(1.5px 1.5px at 94% 78%, #c4b5fd, transparent);
+  animation: twinkle 4s ease-in-out infinite alternate;
+}
+@keyframes twinkle { from { opacity: .35; } to { opacity: .85; } }
+.bg-grid { animation: gridShift 20s linear infinite; }
+@keyframes gridShift { from { background-position: 0 0, 0 0; } to { background-position: 48px 48px, 48px 48px; } }
+
+/* =====================================================================
+   v1.2 — Botones animados
+   ===================================================================== */
+.btn, .answer-btn, .icon-btn, .mode-card, .tabs button { position: relative; overflow: hidden; }
+.ripple { position: absolute; border-radius: 50%; background: rgba(255, 255, 255, .35); transform: scale(0); animation: ripple .6s ease-out forwards; pointer-events: none; }
+@keyframes ripple { to { transform: scale(1); opacity: 0; } }
+
+/* Degradado que se desplaza en los botones principales */
+.btn-primary { background: linear-gradient(120deg, #8b5cf6, #3b82f6, #22d3ee, #ec4899, #8b5cf6); background-size: 300% 300%; animation: gradientFlow 6s ease infinite; }
+@keyframes gradientFlow { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+.btn-primary:hover:not(:disabled) { transform: translateY(-3px) scale(1.02); box-shadow: 0 0 0 2px rgba(255, 255, 255, .15), 0 12px 40px rgba(139, 92, 246, .6), 0 0 60px rgba(34, 211, 238, .35); }
+
+/* Botón principal de inicio: pulso de luz */
+#btn-play:not(:disabled) { animation: gradientFlow 6s ease infinite, glowPulse 2.4s ease-in-out infinite; }
+@keyframes glowPulse { 0%, 100% { box-shadow: 0 8px 30px rgba(99, 102, 241, .35); } 50% { box-shadow: 0 8px 46px rgba(139, 92, 246, .75), 0 0 70px rgba(34, 211, 238, .35); } }
+
+/* Botones secundarios: borde neón al pasar el mouse */
+.btn-ghost::after {
+  content: ''; position: absolute; inset: 0; border-radius: inherit; padding: 1.5px; pointer-events: none;
+  background: conic-gradient(from var(--ang, 0deg), transparent 0 60%, #22d3ee, #8b5cf6, transparent 85%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  opacity: 0; transition: opacity .25s;
+}
+.btn-ghost:hover:not(:disabled)::after { opacity: 1; animation: spinBorder 1.8s linear infinite; }
+.btn-ghost:hover:not(:disabled) { transform: translateY(-2px); }
+@property --ang { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+@keyframes spinBorder { to { --ang: 360deg; } }
+
+/* Botones de respuesta: borde de luz giratorio + brillo + latido */
+.answer-btn::before {
+  content: ''; position: absolute; inset: -2px; border-radius: inherit; z-index: 0; pointer-events: none;
+  background: conic-gradient(from var(--ang, 0deg), transparent 0 70%, rgba(255, 255, 255, .9), transparent 90%);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude;
+  padding: 2px; animation: spinBorder 3s linear infinite; opacity: .8;
+}
+.answer-btn.ai::before { animation-delay: -1.5s; }
+.answer-btn > span:not(.ripple) { position: relative; z-index: 1; }
+.answer-btn:disabled::before { opacity: 0; }
+.answer-btn:not(:disabled) .ans-ico { display: inline-block; animation: iconBob 2s ease-in-out infinite; }
+.answer-btn.ai:not(:disabled) .ans-ico { animation-delay: -1s; }
+@keyframes iconBob { 0%, 100% { transform: translateY(0) rotate(0); } 50% { transform: translateY(-4px) rotate(-6deg); } }
+.answer-btn:hover:not(:disabled) { transform: translateY(-4px) scale(1.02); }
+.answer-btn.real:hover:not(:disabled) { box-shadow: 0 12px 40px rgba(16, 185, 129, .55), 0 0 50px rgba(16, 185, 129, .3); }
+.answer-btn.ai:hover:not(:disabled) { box-shadow: 0 12px 40px rgba(124, 58, 237, .65), 0 0 50px rgba(139, 92, 246, .35); }
+.answer-btn:active:not(:disabled) { transform: scale(.97); }
+
+/* Tarjetas de modo y botones de íconos */
+.mode-card:hover { transform: translateY(-4px) rotate(-.4deg); box-shadow: 0 14px 40px rgba(139, 92, 246, .3); }
+.mode-card:has(input:checked) .mode-ico { display: inline-block; animation: iconBob 2s ease-in-out infinite; }
+.icon-btn { transition: transform .2s, border-color .2s, box-shadow .2s; }
+.icon-btn:hover { transform: translateY(-2px) rotate(-6deg); box-shadow: 0 0 20px rgba(139, 92, 246, .45); }
+
+/* =====================================================================
+   v1.2 — Explicación compacta con avance automático
+   ===================================================================== */
+.fb-compact .fb-main { grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); align-items: center; padding-bottom: 18px; }
+.fb-key { margin: 0; padding: 12px 14px; border-radius: 14px; background: rgba(139, 92, 246, .1); border: 1px solid rgba(167, 139, 250, .35); color: var(--text); line-height: 1.5; }
+.fb-key strong { color: #c4b5fd; }
+.btn-next { min-width: 240px; }
+.btn-next .next-bar { position: absolute; left: 0; bottom: 0; height: 4px; width: 100%; background: rgba(255, 255, 255, .85); transform-origin: left; transform: scaleX(0); }
+.btn-next.counting .next-bar { animation: nextBar var(--next-ms, 5000ms) linear forwards; }
+@keyframes nextBar { from { transform: scaleX(1); } to { transform: scaleX(0); } }

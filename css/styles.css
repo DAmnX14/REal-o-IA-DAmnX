@@ -570,3 +570,5 @@ body[data-screen="game"] .site-footer { display: none; }
 .stage img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; object-fit: contain; }
 .fb-image img { position: absolute; inset: 0; }
 .fb-image figcaption.stamp { left: auto; right: 12px; bottom: 14px; white-space: nowrap; }
+/* Los botones no seleccionan texto al tocarlos dos veces */
+.btn, .answer-btn, .icon-btn, .tabs button, .mode-card, .segmented span { user-select: none; -webkit-user-select: none; }

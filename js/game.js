@@ -24,6 +24,9 @@ export const LEARNING_CHECKLIST = [
   ['Contexto y procedencia', 'La prueba definitiva es la fuente: autor, fecha, lugar, metadatos y publicación original.'],
 ];
 
+/** Tiempo hasta pasar automáticamente a la siguiente imagen (modos clásico y contrarreloj). */
+export const AUTO_NEXT_MS = 5000;
+
 export class GameController {
   /**
    * @param {object} deps
@@ -285,59 +288,114 @@ export class GameController {
       ['source', '📄', 'Procedencia documentada', prov],
     ];
     const safeImg = escapeHtml(q.image_url);
-    $('#feedback-body').innerHTML = `
-      <header class="fb-hero ${kind}">
-        <div class="fb-icon">${icon}</div>
-        <div class="fb-hero-text">
-          <div class="fb-verdict">${verdict}</div>
-          <div class="fb-you">${escapeHtml(sub)}</div>
+    const compact = st.mode !== 'learning';
+    if (compact) {
+      // Modo clásico / contrarreloj: solo lo esencial (el detalle completo queda en el modo Aprendizaje
+      // y en la revisión al final de la partida).
+      const tool = (q.ai_tool || '').split(' (')[0];
+      const author = (q.author || '').length > 42 ? `${q.author.slice(0, 40)}…` : (q.author || 'autor documentado');
+      const key = r.isAi
+        ? `<strong>Generada con ${escapeHtml(tool || 'IA')}.</strong> Fijate: ${escapeHtml((q.features[0] || '').replace(/\.$/, ''))}.`
+        : `<strong>Foto real de ${escapeHtml(author)}.</strong> ${escapeHtml(q.features[0] || '')}`;
+      $('#feedback-body').innerHTML = `
+        <div class="fb-compact">
+          <header class="fb-hero ${kind}">
+            <div class="fb-icon">${icon}</div>
+            <div class="fb-hero-text">
+              <div class="fb-verdict">${verdict}</div>
+              <div class="fb-you">${escapeHtml(sub)}</div>
+            </div>
+            <div class="fb-total ${r.points.total ? '' : 'zero'}">+${r.points.total}<small>puntos</small></div>
+          </header>
+          <div class="fb-main">
+            <figure class="fb-image" style="--bg:url('${safeImg}')">
+              <img src="${safeImg}" alt="${escapeHtml(q.title)}">
+              <figcaption class="stamp ${r.isAi ? 'stamp-ai' : 'stamp-real'}">${truth}</figcaption>
+            </figure>
+            <div class="fb-summary">
+              <h3>${escapeHtml(q.title)}</h3>
+              <p class="fb-key">${key}</p>
+              ${chips.length ? `<div class="fb-chips">${chips.join('')}</div>` : ''}
+            </div>
+          </div>
+        </div>`;
+    } else {
+      $('#feedback-body').innerHTML = `
+        <header class="fb-hero ${kind}">
+          <div class="fb-icon">${icon}</div>
+          <div class="fb-hero-text">
+            <div class="fb-verdict">${verdict}</div>
+            <div class="fb-you">${escapeHtml(sub)}</div>
+          </div>
+          <div class="fb-total ${r.points.total ? '' : 'zero'}">+${r.points.total}<small>puntos</small></div>
+        </header>
+        <div class="fb-main">
+          <figure class="fb-image" style="--bg:url('${safeImg}')">
+            <img src="${safeImg}" alt="${escapeHtml(q.title)}">
+            <figcaption class="stamp ${r.isAi ? 'stamp-ai' : 'stamp-real'}">${truth}</figcaption>
+          </figure>
+          <div class="fb-summary">
+            <h3>${escapeHtml(q.title)}</h3>
+            <p class="fb-explanation">${escapeHtml(q.explanation)}</p>
+            ${chips.length ? `<div class="fb-chips">${chips.join('')}</div>` : ''}
+            ${st.mode === 'learning' ? `<p class="fb-learn">🎓 Los detalles visuales ayudan a sospechar, pero no son una prueba: lo que confirma el origen es la procedencia documentada.</p>` : ''}
+          </div>
         </div>
-        <div class="fb-total ${r.points.total ? '' : 'zero'}">+${r.points.total}<small>puntos</small></div>
-      </header>
-      <div class="fb-main">
-        <figure class="fb-image" style="--bg:url('${safeImg}')">
-          <img src="${safeImg}" alt="${escapeHtml(q.title)}">
-          <figcaption class="stamp ${r.isAi ? 'stamp-ai' : 'stamp-real'}">${truth}</figcaption>
-        </figure>
-        <div class="fb-summary">
-          <h3>${escapeHtml(q.title)}</h3>
-          <p class="fb-explanation">${escapeHtml(q.explanation)}</p>
-          ${chips.length ? `<div class="fb-chips">${chips.join('')}</div>` : ''}
-          ${st.mode === 'learning' ? `<p class="fb-learn">🎓 Los detalles visuales ayudan a sospechar, pero no son una prueba: lo que confirma el origen es la procedencia documentada.</p>` : ''}
-        </div>
-      </div>
-      <nav class="fb-tabs" role="tablist" aria-label="Más información">
-        ${tabs.map(([id, ico, label], i) => `<button type="button" role="tab" id="fbt-${id}" aria-controls="fbp-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"><span aria-hidden="true">${ico}</span> ${label}</button>`).join('')}
-      </nav>
-      ${tabs.map(([id, , label, html], i) => `<section class="fb-panel" role="tabpanel" id="fbp-${id}" aria-labelledby="fbt-${id}" ${i === 0 ? '' : 'hidden'}><h4 class="sr-only">${label}</h4>${html}</section>`).join('')}
-    `;
-    const tabBtns = [...document.querySelectorAll('.fb-tabs [role=tab]')];
-    const select = (btn) => {
-      for (const b of tabBtns) {
-        const on = b === btn;
-        b.setAttribute('aria-selected', String(on));
-        b.tabIndex = on ? 0 : -1;
-        document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
-      }
-    };
-    tabBtns.forEach((b, i) => {
-      b.addEventListener('click', () => select(b));
-      b.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-          e.preventDefault();
-          const n = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : tabBtns.length - 1)) % tabBtns.length];
-          select(n); n.focus();
+        <nav class="fb-tabs" role="tablist" aria-label="Más información">
+          ${tabs.map(([id, ico, label], i) => `<button type="button" role="tab" id="fbt-${id}" aria-controls="fbp-${id}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}"><span aria-hidden="true">${ico}</span> ${label}</button>`).join('')}
+        </nav>
+        ${tabs.map(([id, , label, html], i) => `<section class="fb-panel" role="tabpanel" id="fbp-${id}" aria-labelledby="fbt-${id}" ${i === 0 ? '' : 'hidden'}><h4 class="sr-only">${label}</h4>${html}</section>`).join('')}
+      `;
+      const tabBtns = [...document.querySelectorAll('.fb-tabs [role=tab]')];
+      const select = (btn) => {
+        for (const b of tabBtns) {
+          const on = b === btn;
+          b.setAttribute('aria-selected', String(on));
+          b.tabIndex = on ? 0 : -1;
+          document.getElementById(b.getAttribute('aria-controls')).hidden = !on;
         }
+      };
+      tabBtns.forEach((b, i) => {
+        b.addEventListener('click', () => select(b));
+        b.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const n = tabBtns[(i + (e.key === 'ArrowRight' ? 1 : tabBtns.length - 1)) % tabBtns.length];
+            select(n); n.focus();
+          }
+        });
       });
-    });
+    }
     const isLast = st.total && st.answered >= st.total;
-    $('#btn-continue').textContent = isLast ? 'VER RESULTADOS' : 'CONTINUAR';
+    const label = isLast ? 'VER RESULTADOS' : 'SIGUIENTE';
+    const btn = $('#btn-continue');
+    btn.classList.add('btn-next');
+    btn.innerHTML = `<span class="btn-label">${label} ›</span><span class="next-bar" aria-hidden="true"></span>`;
+    if (compact) this._startAutoNext(btn, label);
     const fb = $('#feedback');
     fb.hidden = false;
     fb.scrollTop = 0;
     music.duck(true);
     requestAnimationFrame(() => fb.classList.add('open'));
     setTimeout(() => $('#btn-continue').focus({ preventScroll: true }), 50);
+  }
+
+  /** Pasa sola a la siguiente imagen a los AUTO_NEXT_MS (el botón permite seguir antes). */
+  _startAutoNext(btn, label) {
+    this._stopAutoNext();
+    let left = Math.round(AUTO_NEXT_MS / 1000);
+    const paint = () => { btn.querySelector('.btn-label').textContent = `${label} (${left}) ›`; };
+    paint();
+    btn.style.setProperty('--next-ms', `${AUTO_NEXT_MS}ms`);
+    btn.classList.remove('counting'); void btn.offsetWidth; btn.classList.add('counting');
+    this._autoTick = setInterval(() => { left = Math.max(0, left - 1); paint(); }, 1000);
+    this._autoTimer = setTimeout(() => this.continue(), AUTO_NEXT_MS);
+  }
+
+  _stopAutoNext() {
+    clearTimeout(this._autoTimer); clearInterval(this._autoTick);
+    this._autoTimer = this._autoTick = null;
+    $('#btn-continue')?.classList.remove('counting');
   }
 
   continue() {
@@ -351,6 +409,7 @@ export class GameController {
   }
 
   _closeFeedback() {
+    this._stopAutoNext();
     const fb = $('#feedback');
     fb.classList.remove('open');
     music.duck(false);

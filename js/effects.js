@@ -1,8 +1,8 @@
 /**
  * effects.js — Efectos visuales: confeti, puntos flotantes, contador animado.
- * Respeta "prefers-reduced-motion".
+ * Se desactivan si la persona apaga las animaciones con el botón ✨ del juego.
  */
-const reduced = () => window.matchMedia?.('(prefers-reduced-motion: reduce)').matches;
+const reduced = () => document.body.classList.contains('reduce-motion');
 
 /** Confeti en canvas a pantalla completa. intensity: 0.3 – 1.5 */
 export function confetti(intensity = 1) {

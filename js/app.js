@@ -95,7 +95,7 @@ const intro = {
   },
   start() {
     if (this.timer || this.images.length < 2) return;
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (document.body.classList.contains('reduce-motion')) return;
     this.timer = setInterval(() => {
       const imgs = $$('#intro-stack img');
       if (!imgs.length) return;
@@ -246,6 +246,30 @@ function bindGlobal() {
   };
   st.addEventListener('click', () => { sound.toggle(); paint(); sound.play('click'); });
   paint();
+  // Animaciones (✨): activadas por defecto, aunque el sistema operativo las tenga apagadas
+  const fx = $('#btn-motion');
+  const paintMotion = () => {
+    const on = storage.prefs().motion !== false;
+    document.body.classList.toggle('reduce-motion', !on);
+    fx.setAttribute('aria-pressed', String(on));
+    fx.title = on ? 'Desactivar animaciones' : 'Activar animaciones';
+    fx.classList.toggle('off', !on);
+  };
+  fx.addEventListener('click', () => { storage.setPref('motion', storage.prefs().motion === false); paintMotion(); });
+  paintMotion();
+
+  // Efecto "onda" al tocar botones
+  document.addEventListener('pointerdown', (e) => {
+    const b = e.target.closest('.btn, .answer-btn, .icon-btn, .mode-card, .tabs button');
+    if (!b || b.disabled || document.body.classList.contains('reduce-motion')) return;
+    const r = b.getBoundingClientRect();
+    const size = Math.max(r.width, r.height) * 1.4;
+    const w = el('span', { class: 'ripple' });
+    w.style.cssText = `width:${size}px;height:${size}px;left:${e.clientX - r.left - size / 2}px;top:${e.clientY - r.top - size / 2}px`;
+    b.append(w);
+    setTimeout(() => w.remove(), 650);
+  });
+
   const mb = $('#btn-music');
   const paintMusic = () => {
     mb.setAttribute('aria-pressed', String(music.enabled));
