@@ -1,0 +1,21 @@
+{
+  "name": "real-or-ai",
+  "version": "1.0.0",
+  "description": "REAL OR AI – videojuego educativo: ¿fotografía real o imagen generada por inteligencia artificial?",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "node scripts/serve.mjs 8080",
+    "verify": "node scripts/verify-bank.mjs",
+    "seed": "node scripts/build-seed.mjs",
+    "config": "node scripts/build-config.mjs",
+    "build": "node scripts/build-config.mjs && node scripts/verify-bank.mjs",
+    "test": "node scripts/verify-bank.mjs && node --test tests/unit.test.mjs && node tests/e2e.mjs",
+    "test:unit": "node --test tests/unit.test.mjs",
+    "test:e2e": "node tests/e2e.mjs",
+    "test:admin": "node tests/e2e-admin.mjs"
+  },
+  "engines": { "node": ">=18" },
+  "devDependencies": {}
+}

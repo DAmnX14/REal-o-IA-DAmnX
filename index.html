@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>REAL OR AI – ¿Podés distinguir lo real de lo artificial?</title>
+  <meta name="description" content="Videojuego educativo: descubrí si cada imagen es una fotografía real o fue generada por inteligencia artificial. Ranking global, modo contrarreloj y modo aprendizaje.">
+  <meta name="theme-color" content="#070a1a">
+  <meta property="og:title" content="REAL OR AI – ¿Podés distinguir la realidad?">
+  <meta property="og:description" content="¿Foto real o generada por IA? Poné a prueba tu ojo.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body data-screen="home">
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <a href="#/" class="brand" data-go="home" aria-label="REAL OR AI – inicio">
+      <img src="assets/icons/logo.svg" alt="" width="34" height="34">
+      <span>REAL <em>OR</em> AI</span>
+    </a>
+    <div class="topbar-right">
+      <span id="conn-status" class="pill" role="status">● Conectando…</span>
+      <button id="btn-sound" class="icon-btn" type="button" aria-pressed="true" aria-label="Sonido"><span class="ico" aria-hidden="true">🔊</span></button>
+    </div>
+  </header>
+
+  <main id="app">
+    <!-- ==================== INICIO ==================== -->
+    <section class="screen screen-home" id="screen-home" aria-labelledby="home-title">
+      <div class="home-grid">
+        <div class="home-copy">
+          <p class="kicker">Juego educativo · Alfabetización visual</p>
+          <h1 id="home-title" class="logo-title">REAL <span>OR</span> AI</h1>
+          <p class="slogan">¿Podés distinguir lo real de lo artificial?</p>
+          <div class="home-actions">
+            <button id="btn-play" class="btn btn-primary btn-xl" type="button" data-go="play">▶ JUGAR AHORA</button>
+            <div class="home-secondary">
+              <button class="btn btn-ghost" type="button" data-go="ranking">🏆 RANKING GLOBAL</button>
+              <button class="btn btn-ghost" type="button" data-go="howto">❓ CÓMO JUGAR</button>
+              <button class="btn btn-ghost" type="button" data-go="stats">📊 ESTADÍSTICAS</button>
+            </div>
+          </div>
+          <p class="bank-status" id="bank-status" aria-live="polite"></p>
+        </div>
+        <div class="intro-stage" aria-hidden="true">
+          <div class="intro-frame">
+            <div id="intro-stack" class="intro-stack"></div>
+            <div class="scanline"></div>
+            <div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div>
+            <div id="intro-label" class="intro-label">¿REAL?</div>
+          </div>
+          <p class="intro-caption">Fotografías reales y generadas por IA se alternan. ¿Cuál es cuál?</p>
+        </div>
+      </div>
+      <footer class="home-footer">
+        <a href="#/creditos" data-go="credits">Créditos de imágenes</a>
+        <span aria-hidden="true">·</span>
+        <a href="admin/" class="admin-link" rel="nofollow">🔒 Administración</a>
+      </footer>
+    </section>
+
+    <!-- ==================== NOMBRE ==================== -->
+    <section class="screen screen-name" id="screen-name" hidden aria-labelledby="name-title">
+      <div class="card narrow">
+        <h2 id="name-title">¿Cómo te llamamos?</h2>
+        <p class="muted">Ingresá tu nombre o apodo para aparecer en el ranking. No pedimos correo ni contraseña.</p>
+        <form id="name-form" novalidate autocomplete="off">
+          <label for="player-name" class="label">Nombre o apodo</label>
+          <div class="input-wrap">
+            <input id="player-name" name="player" type="text" inputmode="text" minlength="3" maxlength="20" required
+                   placeholder="Ej.: Detective_IA" aria-describedby="name-help name-error" spellcheck="false">
+            <span id="name-counter" class="counter">0/20</span>
+          </div>
+          <p id="name-help" class="help">Entre 3 y 20 caracteres: letras, números, espacios, puntos, guiones o guion bajo.</p>
+          <p id="name-error" class="field-error" role="alert"></p>
+          <div class="row-actions">
+            <button class="btn btn-ghost" type="button" data-go="home">Volver</button>
+            <button class="btn btn-primary" type="submit">CONTINUAR →</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ==================== MODOS ==================== -->
+    <section class="screen screen-mode" id="screen-mode" hidden aria-labelledby="welcome-title">
+      <form id="mode-form" class="mode-wrap">
+        <div class="welcome">
+          <h2 id="welcome-title">¡Hola!</h2>
+          <p id="welcome-sub" class="muted"></p>
+          <button id="btn-change-name" class="link-btn" type="button">Cambiar nombre</button>
+        </div>
+        <fieldset class="mode-cards">
+          <legend class="sr-only">Modo de juego</legend>
+          <label class="mode-card">
+            <input type="radio" name="mode" value="classic" checked>
+            <span class="mode-ico" aria-hidden="true">🎯</span>
+            <span class="mode-name">Clásico</span>
+            <span class="mode-desc"><b data-rule="n">10</b> imágenes · <b data-rule="time">15</b> s por imagen · bonus por rapidez y rachas · <strong>suma al ranking</strong></span>
+          </label>
+          <label class="mode-card">
+            <input type="radio" name="mode" value="timeattack">
+            <span class="mode-ico" aria-hidden="true">⏱️</span>
+            <span class="mode-name">Contrarreloj</span>
+            <span class="mode-desc"><b data-rule="ta">60</b> segundos para identificar todas las imágenes que puedas · ranking propio</span>
+          </label>
+          <label class="mode-card">
+            <input type="radio" name="mode" value="learning">
+            <span class="mode-ico" aria-hidden="true">🎓</span>
+            <span class="mode-name">Aprendizaje</span>
+            <span class="mode-desc">Sin límite de tiempo · guía de observación y explicaciones detalladas · no afecta el ranking</span>
+          </label>
+        </fieldset>
+        <fieldset class="difficulty">
+          <legend>Dificultad</legend>
+          <div class="segmented">
+            <label><input type="radio" name="difficulty" value="mixed" checked><span>Mixta</span></label>
+            <label><input type="radio" name="difficulty" value="easy"><span>Fácil</span></label>
+            <label><input type="radio" name="difficulty" value="medium"><span>Intermedio</span></label>
+            <label><input type="radio" name="difficulty" value="hard"><span>Difícil</span></label>
+          </div>
+        </fieldset>
+        <div class="row-actions center">
+          <button class="btn btn-ghost" type="button" data-go="home">Inicio</button>
+          <button id="btn-start" class="btn btn-primary btn-xl" type="submit">COMENZAR PARTIDA</button>
+        </div>
+      </form>
+    </section>
+
+    <!-- ==================== JUEGO ==================== -->
+    <section class="screen screen-game" id="screen-game" hidden aria-label="Partida en curso">
+      <div class="hud" role="group" aria-label="Estado de la partida">
+        <div class="hud-item hud-player"><span class="hud-k">Jugador</span><span id="hud-player" class="hud-v">—</span><span id="hud-mode" class="hud-mode"></span></div>
+        <div class="hud-item"><span class="hud-k">Imagen</span><span id="hud-qnum" class="hud-v">1/10</span></div>
+        <div class="hud-item"><span class="hud-k">Puntaje</span><span id="hud-score" class="hud-v score" data-value="0" aria-live="polite">0</span></div>
+        <div class="hud-item hud-streak"><span class="hud-k">Racha</span><span class="hud-v"><span aria-hidden="true">🔥</span><span id="hud-streak">0</span></span></div>
+        <div id="hud-timer" class="hud-timer" role="timer" aria-label="Tiempo restante">
+          <svg viewBox="0 0 60 60" aria-hidden="true"><circle class="ring-bg" cx="30" cy="30" r="26"/><circle id="hud-timer-ring" class="ring" cx="30" cy="30" r="26"/></svg>
+          <span id="hud-timer-text">15</span>
+        </div>
+        <button id="btn-quit" class="icon-btn quit" type="button" title="Abandonar partida" aria-label="Abandonar partida">✕</button>
+      </div>
+      <div class="bars">
+        <div class="progress" aria-label="Progreso de la partida"><div id="hud-progress-fill" class="progress-fill"></div></div>
+        <div class="timebar" aria-hidden="true"><div id="hud-timebar-fill" class="timebar-fill"></div></div>
+      </div>
+
+      <div class="play-area">
+        <figure id="stage" class="stage">
+          <img id="q-image" alt="" draggable="false">
+          <div class="stage-loading"><span class="spinner"></span></div>
+          <div id="image-error" class="image-error" hidden>
+            <p>No se pudo cargar la imagen.</p>
+            <button id="btn-retry-image" class="btn btn-ghost" type="button">Reintentar</button>
+          </div>
+          <div id="answer-flash" class="answer-flash" aria-live="assertive"></div>
+          <figcaption id="q-meta" class="q-meta"></figcaption>
+        </figure>
+        <aside id="learning-guide" class="learning-guide" hidden>
+          <h3>🎓 Qué observar</h3>
+          <ul id="learning-guide-list"></ul>
+        </aside>
+      </div>
+
+      <div class="answers">
+        <button id="btn-real" class="answer-btn real" type="button" disabled>
+          <span class="ans-ico" aria-hidden="true">📷</span><span>REAL</span><kbd>R</kbd>
+        </button>
+        <button id="btn-ai" class="answer-btn ai" type="button" disabled>
+          <span class="ans-ico" aria-hidden="true">🤖</span><span>GENERADA POR INTELIGENCIA ARTIFICIAL</span><kbd>I</kbd>
+        </button>
+      </div>
+      <div id="streak-banner" class="streak-banner" aria-live="polite"></div>
+      <div id="retry-box" class="retry-box" hidden role="alert">
+        <p id="retry-text"></p><button id="btn-retry" class="btn btn-primary" type="button">Reintentar</button>
+      </div>
+    </section>
+
+    <!-- ==================== RESULTADOS ==================== -->
+    <section class="screen screen-results" id="screen-results" hidden aria-labelledby="results-title">
+      <h2 id="results-title" class="sr-only">Resultados de la partida</h2>
+      <div id="results-body" class="results-body"></div>
+      <div class="row-actions center wrap">
+        <button id="btn-play-again" class="btn btn-primary" type="button">↻ VOLVER A JUGAR</button>
+        <button id="btn-results-ranking" class="btn btn-ghost" type="button">🏆 VER RANKING</button>
+        <button id="btn-results-modes" class="btn btn-ghost" type="button">Cambiar modo</button>
+        <button id="btn-results-home" class="btn btn-ghost" type="button">⌂ VOLVER AL INICIO</button>
+      </div>
+    </section>
+
+    <!-- ==================== RANKING ==================== -->
+    <section class="screen screen-ranking" id="screen-ranking" hidden aria-labelledby="ranking-title">
+      <div class="section-head">
+        <h2 id="ranking-title">🏆 Ranking global</h2>
+        <p id="rank-scope" class="scope-line"></p>
+      </div>
+      <div class="rank-tools">
+        <div class="tabs" role="group" aria-label="Modo">
+          <button type="button" data-rank-mode="classic" aria-pressed="true">Clásico</button>
+          <button type="button" data-rank-mode="timeattack" aria-pressed="false">Contrarreloj</button>
+        </div>
+        <input id="rank-search" type="search" placeholder="Buscar jugador…" aria-label="Buscar jugador por nombre" maxlength="20">
+        <button id="rank-refresh" class="icon-btn" type="button" title="Actualizar" aria-label="Actualizar ranking">⟳</button>
+      </div>
+      <div class="table-wrap card">
+        <table class="rank-table">
+          <thead><tr><th scope="col">#</th><th scope="col">Jugador</th><th scope="col" class="num">Puntaje</th><th scope="col" class="num">Aciertos</th><th scope="col" class="num">T. prom.</th><th scope="col">Fecha</th></tr></thead>
+          <tbody id="rank-body"></tbody>
+        </table>
+      </div>
+      <div class="pager">
+        <button id="rank-prev" class="btn btn-ghost btn-sm" type="button">← Anterior</button>
+        <span id="rank-page"></span>
+        <button id="rank-next" class="btn btn-ghost btn-sm" type="button">Siguiente →</button>
+      </div>
+      <p class="muted small center"><span id="rank-updated"></span> · Se actualiza automáticamente. Orden: puntaje, luego % de aciertos y luego menor tiempo promedio. Se muestra la mejor partida de cada jugador.</p>
+      <div class="row-actions center"><button class="btn btn-ghost" type="button" data-go="home">⌂ Inicio</button><button class="btn btn-primary" type="button" data-go="play">▶ Jugar</button></div>
+    </section>
+
+    <!-- ==================== CÓMO JUGAR ==================== -->
+    <section class="screen screen-howto" id="screen-howto" hidden aria-labelledby="howto-title">
+      <div class="section-head"><h2 id="howto-title">❓ Cómo jugar</h2></div>
+      <div class="howto-grid">
+        <article class="card">
+          <h3>1 · Observá</h3>
+          <p>Aparece una imagen grande. Puede ser una <strong>fotografía real</strong> con autor y procedencia documentados, o una imagen <strong>generada por inteligencia artificial</strong>.</p>
+        </article>
+        <article class="card">
+          <h3>2 · Decidí</h3>
+          <p>Elegí <strong>REAL</strong> o <strong>GENERADA POR IA</strong> (también con las teclas <kbd>R</kbd> e <kbd>I</kbd>). En el modo clásico tenés <b data-rule="time">15</b> segundos por imagen.</p>
+        </article>
+        <article class="card">
+          <h3>3 · Aprendé</h3>
+          <p>Después de cada respuesta verás la clasificación verdadera, el contexto, los detalles a observar y la fuente de la imagen.</p>
+        </article>
+      </div>
+      <div class="howto-grid two">
+        <article class="card">
+          <h3>Puntuación</h3>
+          <table class="score-table">
+            <tbody>
+              <tr><td>Respuesta correcta</td><td>+<span data-rule="base">100</span></td></tr>
+              <tr><td>Respuesta incorrecta o sin responder</td><td>0</td></tr>
+              <tr><td>Correcta con más de 10 s restantes (clásico)</td><td>+<span data-rule="speed">50</span></td></tr>
+              <tr><td>Racha de 3 aciertos seguidos</td><td>+<span data-rule="s3">50</span></td></tr>
+              <tr><td>Racha de 5 aciertos seguidos</td><td>+<span data-rule="s5">100</span></td></tr>
+            </tbody>
+          </table>
+          <p class="small muted">El puntaje oficial lo calcula el servidor. El ranking ordena por puntaje; empata por % de aciertos y luego por menor tiempo promedio.</p>
+        </article>
+        <article class="card">
+          <h3>Modos</h3>
+          <ul class="clean">
+            <li><strong>🎯 Clásico:</strong> 10 imágenes (mitad reales, mitad IA), 15 s cada una.</li>
+            <li><strong>⏱️ Contrarreloj:</strong> 60 s para responder tantas imágenes como puedas.</li>
+            <li><strong>🎓 Aprendizaje:</strong> sin reloj, con guía de observación. No suma al ranking.</li>
+          </ul>
+          <h3>Dificultad</h3>
+          <ul class="clean">
+            <li><strong>Fácil:</strong> rasgos relativamente sencillos de identificar.</li>
+            <li><strong>Intermedio:</strong> imágenes bastante realistas.</li>
+            <li><strong>Difícil:</strong> requieren observación detallada.</li>
+          </ul>
+        </article>
+      </div>
+      <article class="card">
+        <h3>🔍 Pistas para reconocer imágenes generadas por IA</h3>
+        <div class="tips-grid">
+          <div><h4>Anatomía</h4><p>Dedos de más o fusionados, dientes uniformes, orejas o anteojos asimétricos, pupilas irregulares.</p></div>
+          <div><h4>Texto</h4><p>Carteles, etiquetas o letras que parecen escritura pero no forman palabras.</p></div>
+          <div><h4>Luz y reflejos</h4><p>Sombras en direcciones distintas, reflejos que no coinciden con la escena, brillo de estudio en todo.</p></div>
+          <div><h4>Texturas</h4><p>Piel de porcelana, pelo como pincelado, superficies plásticas y demasiado perfectas.</p></div>
+          <div><h4>Fondo</h4><p>Objetos que se funden, arquitectura imposible, personas deformes en segundo plano.</p></div>
+          <div><h4>Procedencia</h4><p>La única prueba sólida: ¿quién la publicó, cuándo, dónde y con qué metadatos?</p></div>
+        </div>
+        <p class="note">⚠️ Ningún detalle visual es prueba suficiente. En este juego, cada clasificación está respaldada por la <strong>procedencia documentada</strong> de la imagen, no por su apariencia.</p>
+      </article>
+      <div class="row-actions center"><button class="btn btn-ghost" type="button" data-go="home">⌂ Inicio</button><button class="btn btn-primary" type="button" data-go="play">▶ Jugar ahora</button></div>
+    </section>
+
+    <!-- ==================== ESTADÍSTICAS ==================== -->
+    <section class="screen screen-stats" id="screen-stats" hidden aria-labelledby="stats-title">
+      <div class="section-head"><h2 id="stats-title">📊 Estadísticas</h2></div>
+      <div id="stats-body"></div>
+      <div class="row-actions center"><button class="btn btn-ghost" type="button" data-go="home">⌂ Inicio</button><button class="btn btn-primary" type="button" data-go="play">▶ Jugar</button></div>
+    </section>
+
+    <!-- ==================== CRÉDITOS ==================== -->
+    <section class="screen screen-credits" id="screen-credits" hidden aria-labelledby="credits-title">
+      <div class="section-head">
+        <h2 id="credits-title">Créditos de imágenes</h2>
+        <p class="muted">Todas las imágenes tienen procedencia documentada. Las fotografías se usan según sus licencias libres (CC BY, CC BY-SA, CC0, dominio público, FAL); se cita autor, fuente y licencia. Ordenadas alfabéticamente.</p>
+      </div>
+      <div id="credits-body" class="card table-wrap"></div>
+      <div class="row-actions center"><button class="btn btn-ghost" type="button" data-go="home">⌂ Inicio</button></div>
+    </section>
+  </main>
+
+  <!-- Devolución educativa (diálogo) -->
+  <div id="feedback" class="feedback" hidden role="dialog" aria-modal="true" aria-labelledby="feedback-title">
+    <div class="feedback-card">
+      <h2 id="feedback-title" class="sr-only">Resultado de la respuesta</h2>
+      <div id="feedback-body"></div>
+      <div class="feedback-actions"><button id="btn-continue" class="btn btn-primary btn-xl" type="button">CONTINUAR</button></div>
+    </div>
+  </div>
+
+  <div id="float-layer" class="float-layer" aria-hidden="true"></div>
+  <div id="toasts" class="toasts" aria-live="polite"></div>
+  <noscript><p class="noscript">REAL OR AI necesita JavaScript para funcionar.</p></noscript>
+</body>
+</html>

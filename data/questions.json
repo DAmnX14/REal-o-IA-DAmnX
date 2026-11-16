@@ -1,0 +1,1511 @@
+{
+  "meta": {
+    "name": "REAL OR AI – banco inicial de imágenes",
+    "version": 1,
+    "generated": "2026-11-16",
+    "total": 50,
+    "notes": "Fotografías reales: Wikimedia Commons (autor y licencia tomados de cada página de archivo). Imágenes IA: originales generadas para el proyecto con Canva y archivos de Wikimedia Commons cuya generación por IA está declarada por su autor (herramienta y/o prompt documentados). Las imágenes se redimensionaron a un máximo de 1280 px y se recomprimieron en JPEG; los nombres de archivo son neutros para no revelar la respuesta."
+  },
+  "questions": [
+    {
+      "id": "q001",
+      "file": "assets/images/bank/95c352776a77.jpg",
+      "classification": "REAL",
+      "category": "sports",
+      "difficulty": "easy",
+      "title": "Fútbol callejero frente a una mezquita en El Cairo",
+      "context": "Chicos jugando al fútbol en la calle Al-Mu'izz, junto a la mezquita de Al-Hakim, en El Cairo (Egipto). Fotografía de Mohamed Hozyen Ahmed, de 2017, con las coordenadas del lugar registradas.",
+      "explanation": "Fotografía real con ubicación geográfica precisa y autor identificado. Muestra un momento de acción espontáneo: un jugador barriéndose en el piso, otros en carrera y la pelota en el aire, con sombras duras de pleno sol que coinciden en dirección para todos los cuerpos.",
+      "features": [
+        "Cuerpos en movimiento con anatomía correcta (manos, pies, rodillas).",
+        "Sombras proyectadas en la misma dirección por todos los jugadores.",
+        "Muros de piedra antiguos con desgaste y reparaciones irregulares.",
+        "Personas del fondo y objetos cotidianos que no fueron 'acomodados' para la foto."
+      ],
+      "tips": [
+        "En fotos deportivas, revisá manos y pies en movimiento: la IA suele duplicarlos o fusionarlos.",
+        "Comprobá que todas las sombras apunten hacia el mismo lado.",
+        "Las coordenadas o el lugar declarado permiten verificar la escena con otras fuentes."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boys_playing_street_football_in_Egypt.jpg",
+      "author": "Mohamed Hozyen Ahmed",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 835
+    },
+    {
+      "id": "q002",
+      "file": "assets/images/bank/23fcfe2b8c0a.jpg",
+      "classification": "IA",
+      "category": "animals",
+      "difficulty": "medium",
+      "title": "Cachorro en un porche al atardecer",
+      "context": "Imagen original creada para este juego el 16 de noviembre de 2026 con el generador de imágenes de Canva, a partir del prompt: «Photorealistic photo of a golden retriever puppy sitting on a wooden porch at sunset, shallow depth of field, natural light, 35mm photography». Se exportó recortada a formato apaisado.",
+      "explanation": "Sabemos que es artificial porque la generamos nosotros con IA para este juego (el prompt está registrado). Como suele pasar, el resultado es 'demasiado ideal': un cachorro perfectamente limpio y simétrico, el sol exactamente sobre el lago y una luz dorada que ilumina todo por igual. Al mirar de cerca, las uñas y almohadillas de las patas se ven como pintadas y el reflejo del sol sobre las tablas no coincide del todo con su posición.",
+      "features": [
+        "Pelaje uniforme y limpio, sin pelos sueltos ni suciedad.",
+        "Patas con uñas y almohadillas con aspecto 'pintado'.",
+        "Composición de postal: sol centrado sobre el lago y fondo idílico.",
+        "Brillo sobre las tablas que no coincide exactamente con la posición del sol."
+      ],
+      "tips": [
+        "Las imágenes de animales tiernos son de las más generadas y compartidas en redes.",
+        "Observá patas, uñas y bigotes: son zonas difíciles para la IA.",
+        "Si la escena parece salida de un calendario, buscá quién la publicó primero."
+      ],
+      "source": "Generada para REAL OR AI",
+      "source_url": null,
+      "author": "Generada con IA para este proyecto (Canva)",
+      "license": "Imagen generada para el proyecto con Canva; uso sujeto a los términos de servicio de Canva",
+      "license_url": null,
+      "ai_tool": "Generador de imágenes con IA de Canva",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 672
+    },
+    {
+      "id": "q003",
+      "file": "assets/images/bank/21543d364fa9.jpg",
+      "classification": "REAL",
+      "category": "surreal",
+      "difficulty": "hard",
+      "title": "Cielo naranja sobre San Francisco",
+      "context": "El 9 de septiembre de 2020, el humo de grandes incendios forestales tiñó de naranja el cielo de San Francisco durante todo el día. Esta foto del edificio Antonio's Antiques (701 Bryant Street) fue tomada a las 10:39 de la mañana por el usuario Dllu.",
+      "explanation": "Aunque parece una escena de ciencia ficción, es una fotografía real de un hecho meteorológico documentado por la prensa de todo el mundo, conocido como 'Orange Skies Day'. La hora indicada (media mañana) explica por qué las luces de la calle y del edificio están encendidas pese a ser de día.",
+      "features": [
+        "Cielo naranja uniforme causado por el humo de incendios, sin sol visible.",
+        "Cartel luminoso publicitario real con letras perfectamente legibles.",
+        "Ventanas iluminadas a media mañana por la falta de luz natural.",
+        "Semáforos y faroles encendidos, coherentes con la oscuridad del evento."
+      ],
+      "tips": [
+        "Antes de descartar una imagen 'imposible', buscá si ocurrió algún evento ese día.",
+        "La fecha y la hora de la foto pueden contrastarse con noticias y registros meteorológicos.",
+        "Los carteles y marcas legibles ayudan a ubicar la escena en un lugar real."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Antonio%27s_Antiques_during_Orange_Skies_Day_dllu.jpg",
+      "author": "Dllu",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 887
+    },
+    {
+      "id": "q004",
+      "file": "assets/images/bank/b44e528f4345.jpg",
+      "classification": "IA",
+      "category": "objects",
+      "difficulty": "easy",
+      "title": "Botella de loción para después del sol",
+      "context": "Imagen creada con Craiyon a partir de una indicación sobre una botella de loción para después del sol. Craiyon es un generador gratuito y temprano (2022), con resultados de baja resolución.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, esta imagen fue imaginada por la IA Craiyon. Parece una foto de producto, pero la botella no tiene ninguna etiqueta, marca ni instrucción legible: solo una mancha borrosa en la base que imita texto. El dosificador tiene una forma blanda y poco definida, y el contorno de la botella se 'derrite' levemente contra el fondo.",
+      "features": [
+        "Envase sin etiqueta ni texto legible; solo un garabato borroso cerca de la base.",
+        "Dosificador con forma blanda y sin piezas mecánicas definidas.",
+        "Bordes que se funden con el fondo blanco.",
+        "Superficie demasiado uniforme, sin reflejos ni marcas de fabricación."
+      ],
+      "tips": [
+        "Los productos reales casi siempre tienen texto: marca, contenido, código de barras.",
+        "Buscá piezas que deberían tener una función (tapas, roscas, botones) y comprobá si la tienen.",
+        "Las IA antiguas o gratuitas suelen dejar contornos 'derretidos' y baja nitidez."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Aftersun_lotion_bottle.webp",
+      "author": "Craiyon (DALL-E mini)",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "Craiyon (antes llamado DALL·E mini)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q005",
+      "file": "assets/images/bank/9b372e25bb15.jpg",
+      "classification": "IA",
+      "category": "landscapes",
+      "difficulty": "easy",
+      "title": "Paisaje de montaña con un rayo de luz",
+      "context": "Paisaje creado con Image Playground, la herramienta de generación de imágenes de Apple Intelligence, y publicado en Wikimedia Commons con licencia CC0.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la imagen fue generada con Image Playground de Apple. Su estilo es deliberadamente ilustrado: colores saturados, formas suavizadas y una composición de 'postal perfecta'. Además, un rayo de luz rosado cae desde la nube exactamente sobre la cima de la montaña, algo que no corresponde a ningún fenómeno natural.",
+      "features": [
+        "Rayo de luz rosado imposible que une la nube con la cima.",
+        "Cabañas, árboles y rocas con aspecto de modelo 3D o juguete.",
+        "Agua sin olas ni reflejos detallados.",
+        "Colores y contrastes uniformes en toda la imagen, sin zonas de sombra profunda."
+      ],
+      "tips": [
+        "Algunas herramientas de IA generan un estilo 'caricaturesco' a propósito: no todas buscan parecer fotos.",
+        "Desconfiá de fenómenos de luz que no tienen explicación física.",
+        "Compará la textura de árboles y rocas: en la IA suelen repetirse con la misma forma."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:AppleIntelligenceLandscape.jpg",
+      "author": "Apple Intelligence Image Playground",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "Apple Intelligence – Image Playground",
+      "added_at": "2026-11-16",
+      "width": 1024,
+      "height": 1024
+    },
+    {
+      "id": "q006",
+      "file": "assets/images/bank/519c40de13b6.jpg",
+      "classification": "REAL",
+      "category": "people",
+      "difficulty": "medium",
+      "title": "Niño riendo a la hora dorada",
+      "context": "Retrato de un niño riendo en Don Det (Si Phan Don, Laos), tomado el 16 de octubre de 2018 por Basile Morin con la luz cálida del atardecer.",
+      "explanation": "Es una fotografía real documentada por su autor. La luz cálida y el fondo desenfocado le dan un aspecto 'de estudio' que hoy imitan mucho los generadores, pero los detalles anatómicos son consistentes: dientes de leche irregulares, pelo con mechones sueltos y una camiseta con un estampado gastado y coherente.",
+      "features": [
+        "Dientes irregulares y naturales, no una fila perfecta.",
+        "Mechones de pelo sueltos y desordenados contra el fondo.",
+        "Estampado de la camiseta con desgaste y pliegues reales.",
+        "Desenfoque del fondo propio de un lente con gran apertura."
+      ],
+      "tips": [
+        "La 'hora dorada' y el fondo desenfocado no son pistas de IA: también son técnicas fotográficas clásicas.",
+        "Observá los dientes y las orejas: la IA suele generarlos demasiado uniformes.",
+        "Buscá la publicación original y otras fotos de la misma serie del autor."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Laughing_boy_at_golden_hour.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 1280
+    },
+    {
+      "id": "q007",
+      "file": "assets/images/bank/39ed5d320082.jpg",
+      "classification": "IA",
+      "category": "people",
+      "difficulty": "hard",
+      "title": "Retrato con vestimenta tradicional",
+      "context": "Retrato generado con Meta AI que representa la vestimenta de baile tradicional del pueblo lotud dusun (Sabah, Malasia), publicado en Wikimedia Commons con licencia CC0.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la imagen fue generada con Meta AI para representar una vestimenta tradicional. Es un retrato muy logrado, pero la piel no tiene textura (parece retocada), los collares de cuentas se mezclan entre sí sin un recorrido claro y el tocado combina elementos de forma decorativa más que funcional. Importante: una imagen generada no es una fuente confiable sobre trajes o culturas reales.",
+      "features": [
+        "Piel extremadamente lisa, sin poros ni marcas.",
+        "Collares de cuentas que se superponen sin un recorrido claro.",
+        "Tocado con plumas y adornos que no se sujetan de forma lógica.",
+        "Fondo verde desenfocado y genérico."
+      ],
+      "tips": [
+        "No uses imágenes generadas como documentación de culturas, trajes o hechos históricos.",
+        "Seguí con la vista collares, cadenas y cordones: en la IA suelen perderse.",
+        "Un retrato 'perfecto' sin fotógrafo ni contexto merece verificación."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Meta_AI_904115051_1846391903220269_2463576842067526912_n_20261113_125542.jpg",
+      "author": "Meta AI",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "Meta AI",
+      "added_at": "2026-11-16",
+      "width": 893,
+      "height": 1280
+    },
+    {
+      "id": "q008",
+      "file": "assets/images/bank/fd2f0c55a87f.jpg",
+      "classification": "IA",
+      "category": "people",
+      "difficulty": "medium",
+      "title": "Selfie de una pareja en la ciudad",
+      "context": "Retrato de una pareja generado con Stable Diffusion (Fooocus) para mostrar un caso de 'misgeneration' (error de generación): se pidió una pareja de una mujer caucásica y un hombre asiático, y el modelo dio rasgos parecidos a ambas personas.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, el autor la generó con Stable Diffusion y la publicó justamente como ejemplo de error del modelo: el pedido indicaba personas de orígenes distintos y la IA generó dos rostros con rasgos muy similares. También se notan una piel sin poros, cejas casi idénticas y un fondo urbano genérico y desenfocado.",
+      "features": [
+        "Dos rostros con rasgos muy similares pese a lo pedido en el prompt.",
+        "Piel demasiado lisa, sin poros ni pequeñas imperfecciones.",
+        "Cabellos que se funden con la ropa y el fondo.",
+        "Fondo de ciudad genérico con desenfoque uniforme."
+      ],
+      "tips": [
+        "Los modelos de IA reproducen sesgos de sus datos de entrenamiento.",
+        "En retratos, compará orejas, cejas y dientes: la IA tiende a simetrizarlos.",
+        "Las fotos 'de banco de imágenes' sin fuente verificable merecen una revisión extra."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:SD_-_Stock_photo_of_Asian_male_with_Caucasian_female.jpg",
+      "author": "Stable Diffusion Foocus",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "ai_tool": "Stable Diffusion (interfaz Fooocus)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q009",
+      "file": "assets/images/bank/25281c300272.jpg",
+      "classification": "IA",
+      "category": "everyday",
+      "difficulty": "hard",
+      "title": "Persona usando una app en el celular",
+      "context": "Imagen generada con Adobe Firefly que muestra a un hombre usando una app de 'compañero virtual' en su celular. Fue publicada en Wikimedia Commons para ilustrar artículos sobre compañeros de IA.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la generó Adobe Firefly. Parece una foto de banco de imágenes, pero la pantalla del celular delata el origen: el botón tiene un texto sin sentido y la interfaz no corresponde a ninguna aplicación real. Además, los dedos que sostienen el teléfono se ven algo deformados y el celular no tiene botones laterales coherentes.",
+      "features": [
+        "Botón en pantalla con texto ilegible e inventado.",
+        "Interfaz de la app sin elementos reconocibles.",
+        "Dedos de la mano que sostiene el teléfono con forma poco natural.",
+        "Pulsera y puño de la campera que se funden con la piel."
+      ],
+      "tips": [
+        "Las pantallas (celulares, computadoras, carteles) suelen mostrar texto falso en imágenes generadas.",
+        "Revisá cómo agarran las manos los objetos: dedos, uñas y articulaciones.",
+        "Las imágenes 'de stock' son fáciles de generar: buscá si provienen de un banco con autor."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_male_holding_a_phone_with_an_AI_companion_on_the_screen.jpg",
+      "author": "Adobe Firefly",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": "Adobe Firefly",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 996
+    },
+    {
+      "id": "q010",
+      "file": "assets/images/bank/28f0c143a4f0.jpg",
+      "classification": "IA",
+      "category": "surreal",
+      "difficulty": "easy",
+      "title": "Pareja en un auto antiguo por un camino rural",
+      "context": "Imagen generada con Midjourney v4 con el prompt «nostalgic car, cabrio, young lovers, cruising, cotton field, vintage photo», según la descripción del archivo en Wikimedia Commons.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, se creó con Midjourney v4 pidiendo expresamente una 'foto antigua'. El tono sepia y los bordes gastados imitan una fotografía vieja, pero el auto no corresponde a ningún modelo real reconocible, la patente tiene caracteres sin sentido y los bordes 'rasgados' del papel no siguen un patrón físico de desgaste.",
+      "features": [
+        "Patente con caracteres inventados que imitan letras y números.",
+        "Auto con diseño ambiguo que mezcla rasgos de distintos modelos.",
+        "Bordes de 'foto antigua' simulados de forma uniforme.",
+        "Personas sin detalles definidos en la cabeza y las manos."
+      ],
+      "tips": [
+        "Un filtro antiguo no garantiza que una imagen sea vieja: la IA puede imitar estilos de época.",
+        "Las patentes, carteles y marcas son excelentes para detectar texto inventado.",
+        "Si un vehículo aparece en una foto 'histórica', debería poder identificarse su modelo."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Midjourney_-_Oldtimer.png",
+      "author": "Chikorita",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": "Midjourney v4",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 975
+    },
+    {
+      "id": "q011",
+      "file": "assets/images/bank/5928c3544289.jpg",
+      "classification": "REAL",
+      "category": "people",
+      "difficulty": "medium",
+      "title": "Mujer de 95 años con su gallo",
+      "context": "Retrato de una mujer cubana de 95 años sosteniendo a su gallo mascota en La Habana, tomado el 2 de enero de 2011 por el fotógrafo Jorge Royan.",
+      "explanation": "Fotografía real publicada por su autor con fecha y lugar. Aunque la escena es poco común y muy colorida —algo que podría hacer sospechar—, los detalles son consistentes: la piel muestra arrugas, manchas y venas reales, las plumas del gallo tienen estructura individual y las manos sostienen al animal de forma creíble.",
+      "features": [
+        "Piel con arrugas, manchas y textura irregular propias de la edad.",
+        "Manos con articulaciones y uñas bien formadas sosteniendo al ave.",
+        "Plumas del gallo individuales, con la cresta y la barbilla detalladas.",
+        "Reflejos en los anteojos coherentes con la luz del lugar."
+      ],
+      "tips": [
+        "Que una escena sea inusual no la vuelve falsa: verificá la fuente antes de decidir.",
+        "En retratos de personas mayores, la IA tiende a suavizar demasiado la piel.",
+        "Revisá anteojos: en imágenes generadas suelen tener patillas o lentes asimétricos."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_95_year_old_woman_with_her_pet_rooster%2C_Havana%2C_Cuba.jpg",
+      "author": "Jorge Royan",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 853,
+      "height": 1280
+    },
+    {
+      "id": "q012",
+      "file": "assets/images/bank/c89f88606561.jpg",
+      "classification": "REAL",
+      "category": "people",
+      "difficulty": "hard",
+      "title": "Pescador del lago Inle visto a través de su red",
+      "context": "Un pescador del lago Inle (Myanmar) rema con la pierna mientras se lo ve a través de su canasta cónica de pesca. Fotografía de Benh Lieu Song, del 8 de marzo de 2018.",
+      "explanation": "Es una fotografía real con autor reconocido. La composición, con el pescador 'encuadrado' por la red y el sol en el centro, es tan perfecta que parece generada. Sin embargo, la técnica de remar con la pierna es una tradición documentada de los pescadores intha del lago Inle, y la red tiene una trama tejida a mano, irregular y coherente.",
+      "features": [
+        "Red de pesca tejida a mano con nudos y trama irregulares.",
+        "Técnica de remo con la pierna, típica y documentada del lago Inle.",
+        "Bote de madera con tablas y perspectiva coherentes.",
+        "Sol bajo con reflejo sobre el agua alineado con su posición."
+      ],
+      "tips": [
+        "Una composición 'perfecta' puede ser obra de un buen fotógrafo, no de una IA.",
+        "Investigá las costumbres locales que aparecen: si existen, refuerzan la autenticidad.",
+        "Revisá tramas y patrones (redes, rejas, tejidos): la IA suele romper su continuidad."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Leg_Rowing_Fisherman_Inle_Lake_Myanmar.jpg",
+      "author": "Benh LIEU SONG (Flickr)",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q013",
+      "file": "assets/images/bank/a0c2654918cf.jpg",
+      "classification": "IA",
+      "category": "food",
+      "difficulty": "hard",
+      "title": "Pan trenzado tipo babka",
+      "context": "Imagen de un pan babka trenzado con relleno de chocolate, generada con ChatGPT para ilustrar un artículo en árabe y publicada en Wikimedia Commons con licencia CC0.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue generada con ChatGPT. La imagen es muy realista: luz suave, papel de horno y un pan con aspecto artesanal. Sin embargo, la trenza y el relleno forman espirales casi perfectas y repetidas, no hay migas ni caramelo quemado en los bordes, y el papel de horno está completamente limpio, sin manchas de grasa.",
+      "features": [
+        "Espirales del relleno demasiado regulares y repetidas.",
+        "Ausencia total de migas, grasa o almíbar derramado.",
+        "Papel de horno impecable bajo un pan recién horneado.",
+        "Brillo uniforme en toda la superficie del pan."
+      ],
+      "tips": [
+        "La comida real deja rastros: migas, manchas, quemados.",
+        "Desconfiá de patrones 'trenzados' que se repiten sin variación.",
+        "Las imágenes para ilustrar artículos suelen ser generadas: revisá el crédito."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:%D8%AE%D8%A8%D8%B2_%D8%A7%D9%84%D8%A8%D8%A7%D8%A8%D9%83%D8%A7.png",
+      "author": "Chatgpt",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "ChatGPT (generación de imágenes de OpenAI)",
+      "added_at": "2026-11-16",
+      "width": 853,
+      "height": 1280
+    },
+    {
+      "id": "q014",
+      "file": "assets/images/bank/ce6022257918.jpg",
+      "classification": "REAL",
+      "category": "animals",
+      "difficulty": "hard",
+      "title": "Nena abrazando a su perro",
+      "context": "Una nena de dos años abraza con fuerza a su perro con los ojos cerrados, a la hora dorada, en el campo de Don Det (Si Phan Don, Laos). Fotografía de Basile Morin del 27 de diciembre de 2023.",
+      "explanation": "Fotografía real con autor, fecha y lugar. La escena tiene la estética emotiva y cálida que los generadores suelen producir, pero los detalles son consistentes: los brazos de la nena rodean al perro de forma física y creíble, el pelaje tiene pelos individuales iluminados a contraluz y el suelo de tierra muestra hojas y piedras al azar.",
+      "features": [
+        "Brazos y manos de la nena que rodean al perro de forma anatómicamente correcta.",
+        "Pelaje con pelos individuales iluminados a contraluz.",
+        "Expresiones naturales: ojos cerrados con fuerza y orejas del perro hacia atrás.",
+        "Suelo con hojas secas, piedras y huellas irregulares."
+      ],
+      "tips": [
+        "Las imágenes emotivas son las más usadas para engañar: verificá la fuente antes de compartir.",
+        "Revisá dónde se tocan personas y animales: la IA suele fusionar pelo, ropa y piel.",
+        "Buscá otras fotos del mismo autor en el mismo lugar: suelen formar una serie coherente."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Human%E2%80%93canine_friendship_-_girl_hugging_her_dog_tightly_at_golden_hour_in_Laos.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 853,
+      "height": 1280
+    },
+    {
+      "id": "q015",
+      "file": "assets/images/bank/26a4a55a1b66.jpg",
+      "classification": "REAL",
+      "category": "food",
+      "difficulty": "easy",
+      "title": "Hamburguesa sobre fondo blanco",
+      "context": "Fotografía de producto de una hamburguesa comprada en un local de comida rápida de Estados Unidos, tomada en 2011 por el fotógrafo Evan-Amos, conocido por documentar objetos cotidianos para Wikimedia Commons con fondo blanco.",
+      "explanation": "Es una fotografía real con autor, fecha y descripción documentados en Wikimedia Commons. A diferencia de la publicidad (o de una imagen generada), muestra el producto tal como se compra: el pan está algo aplastado, la lechuga cae de forma desordenada y el queso se derrite de manera desigual.",
+      "features": [
+        "Semillas de sésamo distribuidas al azar, algunas faltantes o encimadas.",
+        "Lechuga y salsa desordenadas, con trozos que sobresalen de manera irregular.",
+        "Queso derretido solo en algunas zonas y con bordes imperfectos.",
+        "Sombra suave y coherente debajo del producto, típica de una caja de luz de estudio."
+      ],
+      "tips": [
+        "La comida real casi nunca es simétrica: buscá pequeñas imperfecciones y migas.",
+        "Las imágenes de IA de comida suelen verse 'publicitarias', con brillos excesivos y capas perfectas.",
+        "Si es un producto comercial, compará con fotos documentadas del mismo producto."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Big_Mac_hamburger.jpg",
+      "author": "Evan-Amos",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 1105
+    },
+    {
+      "id": "q016",
+      "file": "assets/images/bank/0f383477dfd5.jpg",
+      "classification": "IA",
+      "category": "people",
+      "difficulty": "hard",
+      "title": "Mujer abrazando a su perro",
+      "context": "Retrato generado con Adobe Firefly Image 3 con el prompt «Hyperrealistic young woman, holding dog with detailed fur, during golden hour, as realistic highlights and shadows as possible», publicado como ejemplo de las capacidades del modelo.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, el autor la generó con Adobe Firefly Image 3 y publicó el prompt, que pide expresamente máximo realismo. El resultado es muy difícil de distinguir: hay que observar cómo la mujer sostiene al perro (la mano y las patas delanteras no se apoyan de forma clara), el pelaje que se funde con la ropa y una luz de 'hora dorada' perfecta que ilumina a ambos por igual.",
+      "features": [
+        "Mano y patas del perro con un apoyo poco definido.",
+        "Pelaje blanco que se mezcla con la ropa negra en los bordes.",
+        "Luz dorada idéntica sobre la piel y el pelaje.",
+        "Pelo largo de la mujer demasiado ordenado y brillante."
+      ],
+      "tips": [
+        "Los prompts que piden 'hiperrealismo' producen imágenes casi imposibles de detectar a simple vista.",
+        "Revisá los puntos de contacto entre personas, animales y objetos.",
+        "Ante la duda, la búsqueda inversa de imágenes puede llevarte a la publicación original."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adobe_Firefly_generated_realistic_portrait.jpg",
+      "author": "Adobe Firefly Image 3, prompted by Jiří Vedral",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "Adobe Firefly Image 3",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 1280
+    },
+    {
+      "id": "q017",
+      "file": "assets/images/bank/03df79905931.jpg",
+      "classification": "REAL",
+      "category": "food",
+      "difficulty": "medium",
+      "title": "Panes caseros de masa madre",
+      "context": "Panes de masa madre hechos en casa, fotografiados el 22 de mayo de 2020 por Tomás Castelazo sobre un repasador a rayas.",
+      "explanation": "Fotografía real con autor y fecha. Cada pan tiene una forma, un corte y una cocción diferentes; la harina espolvoreada se acumula en las grietas y el repasador forma pliegues con su propio patrón de rayas que sigue la tela de forma lógica.",
+      "features": [
+        "Panes con formas y cortes distintos entre sí.",
+        "Harina acumulada en las grietas de la corteza de manera irregular.",
+        "Rayas del repasador que siguen correctamente los pliegues de la tela.",
+        "Profundidad de campo con enfoque nítido en el primer plano."
+      ],
+      "tips": [
+        "En imágenes generadas, los objetos 'iguales' a veces son copias casi idénticas.",
+        "Seguí con la vista las rayas o patrones de las telas: la IA suele cortarlos o deformarlos.",
+        "Las texturas de harina, migas y corteza son difíciles de imitar con detalle."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Home_made_sour_dough_bread.jpg",
+      "author": "Tomascastelazo",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 620
+    },
+    {
+      "id": "q018",
+      "file": "assets/images/bank/fdcaac39ec82.jpg",
+      "classification": "IA",
+      "category": "surreal",
+      "difficulty": "medium",
+      "title": "Molino abandonado en un campo brumoso",
+      "context": "Imagen de un molino destruido en medio de un campo con niebla, generada con Midjourney en noviembre de 2022 y liberada al dominio público como obra de un algoritmo.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la fuente declarada es «Midjourney AI-generated image». La atmósfera es muy cinematográfica, pero la estructura del molino no tiene lógica: las aspas salen de distintos puntos, la torre es un entramado sin una construcción reconocible y las siluetas del fondo (¿personas?, ¿cruces?, ¿máquinas?) no se pueden identificar.",
+      "features": [
+        "Aspas del molino que no parten de un eje común.",
+        "Torre formada por un entramado sin estructura constructiva.",
+        "Siluetas del fondo ambiguas: no se sabe si son personas u objetos.",
+        "Niebla y luz dramáticas que 'disimulan' los detalles."
+      ],
+      "tips": [
+        "La niebla, el humo y la oscuridad suelen ocultar los errores de la IA: mirá lo que sí se ve.",
+        "Preguntate si cada estructura podría construirse en la realidad.",
+        "Las imágenes de 2022 (Midjourney v3/v4) tienen un estilo pictórico característico."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Abandoned_windmill_field.png",
+      "author": "Mhatopzz",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "Midjourney",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q019",
+      "file": "assets/images/bank/00c545c27f01.jpg",
+      "classification": "REAL",
+      "category": "food",
+      "difficulty": "hard",
+      "title": "Porción de torta de chocolate",
+      "context": "Porción de torta de chocolate espolvoreada con cacao, sobre un plato blanco decorado con salsa de chocolate. Fotografía de Daria Yakovleva del 11 de enero de 2017, liberada con licencia CC0.",
+      "explanation": "Es una fotografía real de estilo publicitario. El fondo blanco, el emplatado prolijo y la iluminación suave son típicos tanto de la fotografía gastronómica profesional como de las imágenes generadas. Lo que la delata como real es su procedencia documentada y detalles como las migas, el cacao disperso y las capas de crema con bordes irregulares.",
+      "features": [
+        "Capas de crema y bizcocho con bordes ligeramente irregulares.",
+        "Cacao en polvo esparcido de forma desigual sobre el plato.",
+        "Hilos de salsa de chocolate con grosores variables.",
+        "Hoja de menta con nervaduras y forma naturales."
+      ],
+      "tips": [
+        "La fotografía gastronómica profesional también busca la perfección: no alcanza con 'se ve demasiado linda'.",
+        "Buscá el origen: bancos de imágenes y archivos libres registran autor y fecha.",
+        "Los detalles minúsculos (migas, polvo, gotas) suelen ser más caóticos en las fotos reales."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Piece_of_chocolate_cake_on_a_white_plate_decorated_with_chocolate_sauce.jpg",
+      "author": "Daria Yakovleva Minor edits made by Subsidiary account",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 871
+    },
+    {
+      "id": "q020",
+      "file": "assets/images/bank/6dc40cf58159.jpg",
+      "classification": "REAL",
+      "category": "sports",
+      "difficulty": "medium",
+      "title": "Surfista dentro de una ola en California",
+      "context": "Un surfista con traje de neopreno en la costa de Santa Cruz (California), fotografiado en 2009 por Brocken Inaglory. El agua de esa zona es fría todo el año, por eso los surfistas usan traje completo.",
+      "explanation": "Es una fotografía real de acción tomada con una velocidad de obturación alta, que congela las gotas de agua en el aire. Los colores intensos del agua y la composición pueden parecer artificiales, pero el patrón de espuma es caótico y físicamente coherente con la dirección de la ola.",
+      "features": [
+        "Gotas y espuma congeladas por la alta velocidad de obturación.",
+        "Transparencia verde del agua iluminada desde atrás.",
+        "Postura del surfista equilibrada, con brazos y piernas bien formados.",
+        "Detalle del traje de neopreno y de la tabla coherentes con el deporte."
+      ],
+      "tips": [
+        "Las fotos de acción reales tienen salpicaduras caóticas; la IA tiende a 'peinar' el agua.",
+        "Comprobá que el cuerpo y la tabla tengan sentido físico en la posición mostrada.",
+        "Imágenes premiadas o muy espectaculares suelen tener un autor fácil de rastrear."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:California_surfer_inside_wave.jpg",
+      "author": "Brocken Inaglory edit by user:Kallerna",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 951
+    },
+    {
+      "id": "q021",
+      "file": "assets/images/bank/125b5af98b15.jpg",
+      "classification": "IA",
+      "category": "food",
+      "difficulty": "hard",
+      "title": "Sopa con dumplings en un bol",
+      "context": "Imagen de una sopa de harina con dumplings creada con el generador de Perchance, liberada con licencia CC0. Imita una foto casera tomada con el celular sobre una mesada.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la imagen se generó con Perchance AI. Está pensada para parecer una foto casera, sin la estética de publicidad, lo que la hace muy engañosa. Pistas: los dumplings tienen pliegues parecidos entre sí, la espuma de la superficie forma un patrón uniforme, el bol se apoya sobre un anillo negro de función poco clara y la mesada tiene un borde que se curva de forma extraña.",
+      "features": [
+        "Dumplings con pliegues muy similares, como copias.",
+        "Espuma de la sopa con textura uniforme y repetitiva.",
+        "Bol apoyado sobre un objeto negro de forma ambigua.",
+        "Borde de la mesada y objetos del fondo con perspectiva inconsistente."
+      ],
+      "tips": [
+        "Las imágenes 'caseras' de IA buscan parecer espontáneas: no te confíes por la falta de brillo.",
+        "Revisá la base de los objetos: ¿sobre qué se apoyan realmente?",
+        "Comprobá si las líneas rectas del fondo (mesadas, muebles) se mantienen rectas."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Flourdumplingsoup.jpg",
+      "author": "Author: Perchance AI; prompted by John Doe",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "Perchance AI (generador de texto a imagen)",
+      "added_at": "2026-11-16",
+      "width": 768,
+      "height": 768
+    },
+    {
+      "id": "q022",
+      "file": "assets/images/bank/8889627127a3.jpg",
+      "classification": "IA",
+      "category": "objects",
+      "difficulty": "medium",
+      "title": "Estabilizador de celular (gimbal)",
+      "context": "Imagen de un estabilizador de tres ejes para celular generada con DALL·E el 21 de febrero de 2025; el propio nombre del archivo conserva el prompt («A modern smartphone gimbal stabilizer with a sleek, ergonomic design…»).",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue generada con DALL·E y el prompt quedó registrado en el nombre del archivo. Imita una foto de catálogo, pero el producto no corresponde a ningún modelo real, los botones de colores no tienen íconos ni funciones reconocibles y el brazo articulado no tiene la estructura de un estabilizador de tres ejes verdadero.",
+      "features": [
+        "Botones de colores sin íconos ni símbolos legibles.",
+        "Brazo articulado sin los motores y uniones de un gimbal real.",
+        "Celular sin marca, botones ni cámaras coherentes.",
+        "Iluminación de estudio perfecta y sin polvo ni huellas."
+      ],
+      "tips": [
+        "En productos tecnológicos, revisá botones, puertos y logos: la IA los inventa.",
+        "Si el producto 'existe', debería poder encontrarse en tiendas o en la web del fabricante.",
+        "Un render de catálogo perfecto puede ser 3D o IA: buscá la fuente."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:DALL%C2%B7E_2025-02-21_23.34.18_-_A_modern_smartphone_gimbal_stabilizer_with_a_sleek%2C_ergonomic_design._The_gimbal_has_a_three-axis_stabilization_system%2C_a_comfortable_grip%2C_and_a_cont.webp",
+      "author": "ChatGPT DALLE",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "ai_tool": "DALL·E (OpenAI)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q023",
+      "file": "assets/images/bank/b7eac655f057.jpg",
+      "classification": "REAL",
+      "category": "everyday",
+      "difficulty": "easy",
+      "title": "Góndola de supermercado con latas de conserva",
+      "context": "Estantería de un supermercado en Recife (Pernambuco, Brasil), fotografiada el 24 de diciembre de 2016 por Wilfredor. Muestra cientos de latas de sardinas y otras conservas ordenadas por marca.",
+      "explanation": "Es una fotografía real: el autor la publicó con fecha y lugar, y la imagen contiene una gran cantidad de detalles repetidos pero no idénticos. Cada lata tiene etiquetas legibles y pequeñas diferencias de posición, desgaste y orientación, y hay carteles de precios con números claros.",
+      "features": [
+        "Cientos de etiquetas legibles con marcas reales.",
+        "Pequeñas variaciones entre latas: rotaciones, abolladuras, reflejos distintos.",
+        "Carteles de precio con números nítidos y coherentes.",
+        "Perspectiva de la góndola uniforme, sin líneas que se curven sin motivo."
+      ],
+      "tips": [
+        "Los patrones repetitivos son difíciles para la IA: suelen aparecer objetos fusionados o etiquetas sin sentido.",
+        "Ampliá zonas con texto pequeño (precios, códigos) para comprobar si son legibles.",
+        "Una escena 'aburrida' y llena de información suele ser más fácil de verificar que una espectacular."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Supermarket_in_recife%2C_pernambuco%2C_Brazil.jpg",
+      "author": "Wilfredor",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 773
+    },
+    {
+      "id": "q024",
+      "file": "assets/images/bank/6e1138e51f05.jpg",
+      "classification": "IA",
+      "category": "landscapes",
+      "difficulty": "hard",
+      "title": "Cordillera nevada vista desde un dron",
+      "context": "Paisaje de montaña generado con Adobe Firefly Image 3 con el prompt «Paradise looking, but believable mountain landscape from drone perspective, sun is shining right over the edge of the highest mountain with snow on top».",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue generada con Adobe Firefly Image 3 pidiendo un paisaje 'creíble'. Funciona muy bien a primera vista, pero las franjas de nieve sobre la ladera forman líneas paralelas demasiado regulares, el sol no está 'sobre el borde de la montaña' como pedía el prompt sino en pleno cielo con un destello exagerado, y la cresta tiene un dibujo repetitivo poco natural.",
+      "features": [
+        "Franjas de nieve paralelas y regulares sobre la ladera.",
+        "Destello solar exagerado con un rayo recto hacia abajo.",
+        "Cresta montañosa con un patrón repetitivo.",
+        "Montañas lejanas sin bruma ni pérdida de contraste coherentes con la distancia."
+      ],
+      "tips": [
+        "En paisajes, prestá atención a patrones que se repiten (nieve, rocas, árboles).",
+        "La distancia real produce bruma y pérdida de contraste: la IA no siempre la respeta.",
+        "Si el paisaje no tiene nombre ni ubicación, es difícil verificarlo: sospechá."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Adobe_Firefly_generated_landscape_photography.jpg",
+      "author": "Adobe Firefly Image 3, prompted by Jiří Vedral",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "Adobe Firefly Image 3",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 1280
+    },
+    {
+      "id": "q025",
+      "file": "assets/images/bank/b6c5f7f6ca35.jpg",
+      "classification": "REAL",
+      "category": "cities",
+      "difficulty": "easy",
+      "title": "Carteles de neón en Kabukichō, Tokio",
+      "context": "Calle del barrio de Kabukichō, en Shinjuku (Tokio, Japón), fotografiada al anochecer el 6 de junio de 2019 por Basile Morin. Es una de las zonas de ocio nocturno más conocidas de la ciudad.",
+      "explanation": "Fotografía real documentada con fecha, hora y lugar exactos. Su rasgo más revelador son los carteles: todos contienen escritura japonesa legible y coherente (nombres de karaokes, restaurantes y precios), algo que los generadores de imágenes suelen reproducir con signos inventados.",
+      "features": [
+        "Textos en japonés legibles y coherentes en decenas de carteles distintos.",
+        "Números de teléfono, precios y logotipos de comercios reales.",
+        "Personas del fondo con proporciones y posturas naturales.",
+        "Reflejos de las luces de colores coherentes sobre el pavimento y las fachadas."
+      ],
+      "tips": [
+        "El texto es una de las mejores pistas: ampliá la imagen y tratá de leer los carteles.",
+        "En escenas con mucha gente, revisá a las personas del fondo: la IA suele deformarlas.",
+        "Si la imagen dice ser de un lugar concreto, podés compararla con mapas o vistas de calle."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Colorful_neon_street_signs_in_Kabukich%C5%8D%2C_Shinjuku%2C_Tokyo.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "id": "q026",
+      "file": "assets/images/bank/abbe9fe575ad.jpg",
+      "classification": "REAL",
+      "category": "people",
+      "difficulty": "medium",
+      "title": "Retrato de un hombre con barba y pipa",
+      "context": "Retrato en blanco y negro de un hombre mayor de larga barba blanca fumando en pipa, publicado en 2018 por ThuyHaBich y liberado con licencia CC0.",
+      "explanation": "Es una fotografía real de retrato con iluminación dramática y fondo negro. Ese estilo 'artístico' también es muy común en imágenes generadas, pero aquí la textura de la piel, los pelos individuales de la barba y las arrugas de las manos tienen una complejidad y una irregularidad que corresponden a una captura fotográfica.",
+      "features": [
+        "Pelos de la barba individuales, con mechones que se cruzan.",
+        "Arrugas profundas en la frente, los ojos y las manos.",
+        "Uñas y nudillos con detalles realistas.",
+        "Humo y pipa con formas coherentes con cómo se sostiene."
+      ],
+      "tips": [
+        "El blanco y negro no prueba nada: la IA también genera imágenes monocromáticas.",
+        "Compará el nivel de detalle de la barba y de la piel: la IA suele mezclarlos en una textura uniforme.",
+        "Buscá la fuente: los retratos reales suelen tener un fotógrafo y una sesión identificables."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Bearded_man_smoking_pipe-3013924.jpg",
+      "author": "ThuyHaBich",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q027",
+      "file": "assets/images/bank/4062b027abec.jpg",
+      "classification": "REAL",
+      "category": "objects",
+      "difficulty": "hard",
+      "title": "Salvavidas cubierto de escarcha",
+      "context": "Un salvavidas cubierto de escarcha atado a un poste de madera en el lago Siskiyou (norte de California), fotografiado el 16 de marzo de 2024 a las 7:02 de la mañana por Radomianin.",
+      "explanation": "Es una fotografía real con fecha y hora exactas. Su composición minimalista y su agua perfectamente lisa la hacen parecer una ilustración, pero la escarcha forma cristales finos sobre la cuerda y el salvavidas, el poste tiene vetas y grietas reales, y el reflejo en el agua calma coincide con los objetos.",
+      "features": [
+        "Cristales de escarcha sobre la cuerda y el plástico del salvavidas.",
+        "Poste de madera con vetas, grietas y marcas de humedad.",
+        "Reflejo en el agua calma coherente con el poste y la cuerda.",
+        "Cuerda con nudos y recorrido físicamente posible."
+      ],
+      "tips": [
+        "Las escenas minimalistas parecen 'demasiado limpias', pero eso no las hace falsas.",
+        "Seguí el recorrido de cuerdas y cables: en la IA suelen aparecer y desaparecer sin lógica.",
+        "Los reflejos en agua calma deben reproducir los objetos con la perspectiva correcta."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Frost-covered_lifebuoy%2C_Lake_Siskiyou.jpg",
+      "author": "Radomianin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 642
+    },
+    {
+      "id": "q028",
+      "file": "assets/images/bank/a3cbd000150f.jpg",
+      "classification": "IA",
+      "category": "everyday",
+      "difficulty": "hard",
+      "title": "Mayordomo sirviendo el té",
+      "context": "Imagen generada con Nano Banana Pro, el modelo de imágenes de Gemini, que muestra a un mayordomo sirviendo un set de té en un café de estilo mansión clásica. El autor la publicó en Wikimedia Commons con licencia CC0.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue generada con Nano Banana Pro (Gemini). Es uno de los modelos más realistas y casi no deja errores evidentes. Hay que mirar los detalles finos: las personas del fondo son muy similares entre sí y algo borrosas, los guantes blancos no muestran costuras ni pliegues creíbles y la bandeja con el soporte de pisos se sostiene de un modo poco firme.",
+      "features": [
+        "Personal del fondo con rostros y posturas muy similares.",
+        "Guantes blancos sin costuras ni arrugas realistas.",
+        "Bandeja y soporte de tortas sostenidos de forma poco firme.",
+        "Iluminación cálida perfecta, sin sombras duras ni zonas quemadas."
+      ],
+      "tips": [
+        "Con los modelos actuales, muchas imágenes no tienen errores visibles: la procedencia es la única prueba sólida.",
+        "Concentrate en lo que la IA 'no cuida': fondos, manos, objetos sostenidos.",
+        "Si una imagen parece una escena de película demasiado perfecta, buscá su origen."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Gemini_Generated_Image_hii02vhii02vhii0.png",
+      "author": "제작자: Nano Banana Pro",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "Nano Banana Pro (Gemini, Google)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 524
+    },
+    {
+      "id": "q029",
+      "file": "assets/images/bank/651a17f3680b.jpg",
+      "classification": "IA",
+      "category": "people",
+      "difficulty": "medium",
+      "title": "Retrato de una mujer sonriente",
+      "context": "Rostro generado por el sitio «This Person Does Not Exist», que usa la red generativa StyleGAN2 (NVIDIA) para crear caras de personas que no existen. Es dominio público.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, proviene de thispersondoesnotexist.com, un sitio que muestra caras inventadas por la red StyleGAN2. La cara es muy convincente, pero las redes GAN dejan pistas en los bordes: un trazo extraño sale de la parte superior de la cabeza, el fondo es una mancha sin objetos reconocibles y la ropa del hombro es una forma borrosa sin costuras.",
+      "features": [
+        "Trazo o 'pelo' anómalo que sale de la parte superior de la cabeza.",
+        "Fondo oscuro sin objetos ni bordes reconocibles.",
+        "Ropa del hombro convertida en una mancha sin forma.",
+        "Ojos centrados siempre en la misma posición, típico de StyleGAN."
+      ],
+      "tips": [
+        "Las caras de StyleGAN tienen los ojos siempre en el mismo lugar de la imagen.",
+        "Mirá el fondo y los bordes del retrato: ahí aparecen los errores.",
+        "Estas caras se usan en perfiles falsos de redes sociales: desconfiá de perfiles sin otras fotos."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:This_Person_Does_Not_Exist_example.jpg",
+      "author": "StyleGAN2",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "StyleGAN2 (sitio thispersondoesnotexist.com)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q030",
+      "file": "assets/images/bank/cdeca861bbca.jpg",
+      "classification": "IA",
+      "category": "nature",
+      "difficulty": "hard",
+      "title": "Erizo escondido entre hojas de otoño",
+      "context": "Imagen de un erizo oculto bajo hojas secas, generada con ChatGPT y publicada en Wikimedia Commons con licencia CC0 para ilustrar contenido en neerlandés.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, el autor la generó con ChatGPT. Es una imagen muy difícil: el bosque, la luz y las hojas parecen naturales. Al observar con atención, las hojas que cubren al erizo forman un 'montículo' demasiado ordenado, las hojas verdes del primer plano tienen un aspecto muy similar entre sí y el cuerpo del animal casi no se distingue de la pila de hojas.",
+      "features": [
+        "Montículo de hojas con forma demasiado regular sobre el animal.",
+        "Hojas verdes del primer plano muy parecidas entre sí.",
+        "Transición difusa entre el pelaje del erizo y las hojas.",
+        "Desenfoque del fondo uniforme y 'de estudio'."
+      ],
+      "tips": [
+        "Las imágenes de IA más recientes pueden no tener errores visibles: por eso importa la fuente.",
+        "Buscá patrones que se repiten (hojas, piedras, ramas) con formas casi idénticas.",
+        "Mirá dónde termina el animal y empieza el entorno: la IA suele fusionarlos."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Egel_verstopt_tussen_herfstbladeren.png",
+      "author": "chatgpt",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "ChatGPT (generación de imágenes de OpenAI)",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q031",
+      "file": "assets/images/bank/ad590dddade8.jpg",
+      "classification": "REAL",
+      "category": "everyday",
+      "difficulty": "medium",
+      "title": "Cinco chicos en una moto entre arrozales",
+      "context": "Una chica conduce una moto con otros cuatro niños como pasajeros entre los arrozales de Don Det (Laos). Fotografía de Basile Morin del 19 de julio de 2017.",
+      "explanation": "Es una fotografía real con autor y descripción detallada. La escena parece improbable, pero es una situación cotidiana en zonas rurales del sudeste asiático. Todos los brazos, manos y piernas se pueden atribuir a cada niño sin ambigüedad, algo que la IA suele resolver mal en grupos apretados.",
+      "features": [
+        "Cinco cuerpos superpuestos con brazos y piernas bien asignados a cada niño.",
+        "Moto con detalles mecánicos coherentes (manubrio, canasto, rayos).",
+        "Ropa con colores y estampados distintos.",
+        "Hierba del arrozal con textura natural y desenfoque progresivo."
+      ],
+      "tips": [
+        "Contá extremidades en grupos de personas: es uno de los puntos débiles de la IA.",
+        "Una situación 'increíble' puede ser normal en otro país: verificá el contexto cultural.",
+        "Los vehículos tienen piezas mecánicas que la IA a menudo deforma."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Five_children_on_a_motorcycle.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q032",
+      "file": "assets/images/bank/d780c6f0ba66.jpg",
+      "classification": "REAL",
+      "category": "nature",
+      "difficulty": "hard",
+      "title": "Flor reflejada en gotas de lluvia",
+      "context": "Macrofotografía de gotas de lluvia sobre un capullo de orquídea Cymbidium, tomada el 20 de febrero de 2011 por Brocken Inaglory. Dentro de cada gota se ve, invertida, una pequeña flor del fondo. El autor indica que apiló el enfoque manualmente.",
+      "explanation": "Parece una imagen fantasiosa, pero es una fotografía real y fue elegida 'imagen destacada' en Wikimedia Commons. El efecto se explica por la óptica: cada gota actúa como una lente que refracta e invierte la imagen de la flor que está detrás. El autor incluso consultó a un especialista en óptica atmosférica, que describió los fenómenos de reflexión y refracción.",
+      "features": [
+        "Imagen invertida de la flor dentro de cada gota, como predice la óptica.",
+        "Reflejos de la fuente de luz en la superficie de las gotas.",
+        "Fondo muy desenfocado propio de la macrofotografía.",
+        "Nitidez en las gotas lograda por apilamiento manual de foco."
+      ],
+      "tips": [
+        "Un fenómeno sorprendente puede tener una explicación física: investigala antes de decidir.",
+        "En fotos reales, lo que se ve dentro de una gota o un espejo es coherente con el entorno.",
+        "Los archivos que documentan la técnica y el equipo usado aportan mucha confianza."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:A_small_flower_refracted_in_rain_droplets.jpg",
+      "author": "Brocken Inaglory . Original uploader was Brocken Inaglory",
+      "license": "CC BY-SA 3.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 1043
+    },
+    {
+      "id": "q033",
+      "file": "assets/images/bank/018fcf5b07b6.jpg",
+      "classification": "REAL",
+      "category": "everyday",
+      "difficulty": "easy",
+      "title": "Hombre leyendo el diario en Basantapur",
+      "context": "Un hombre mayor lee el periódico temprano por la mañana en Basantapur (Katmandú, Nepal). Fotografía de Bijay Chaurasia tomada el 15 de noviembre de 2019.",
+      "explanation": "Es una fotografía real con autor, fecha y lugar registrados. Las páginas del diario muestran columnas de texto e imágenes impresas con estructura de periódico real, y los objetos (taburete, bastón, calzado) tienen un desgaste natural y sombras coherentes con la luz de la mañana.",
+      "features": [
+        "Páginas de diario con columnas, titulares y fotos impresas con estructura real.",
+        "Manos sosteniendo el papel con dedos bien definidos.",
+        "Taburete de madera y bastón con marcas de uso.",
+        "Luz lateral suave de la mañana que ilumina la escena de forma coherente."
+      ],
+      "tips": [
+        "Los periódicos, libros y pantallas son difíciles de imitar: buscá texto con sentido.",
+        "Mirá cómo las manos sostienen los objetos: ¿los dedos tocan realmente el papel?",
+        "Las escenas cotidianas reales tienen desorden y desgaste, no todo luce nuevo."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Old_man_reading_newspaper_early_in_the_morning_at_Basantapur-IMG_6800.jpg",
+      "author": "Bijay Chaurasia (1998–)",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 853,
+      "height": 1280
+    },
+    {
+      "id": "q034",
+      "file": "assets/images/bank/de02f076f7d9.jpg",
+      "classification": "IA",
+      "category": "people",
+      "difficulty": "easy",
+      "title": "Guitarrista de thrash metal en concierto",
+      "context": "Imagen generada con la IA de Bing a partir de la indicación 'Thrash metal guitarist', según declara el autor del archivo en Wikimedia Commons, que la liberó al dominio público.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue creada con Bing Image Creator con el prompt 'Thrash metal guitarist'. Parece la foto de un recital, pero la escena es exagerada y tiene errores típicos: el rostro del músico queda oculto por el pelo, el público del fondo tiene caras deformadas y algunas parecen máscaras con cuernos, y la guitarra tiene un diseño y unas cuerdas difíciles de seguir.",
+      "features": [
+        "Rostros del público deformados o con aspecto de máscara.",
+        "Guitarra con cuerdas y trastes que no siguen una línea continua.",
+        "Llamas y humo con iluminación teatral exagerada y uniforme.",
+        "Manos del guitarrista con una posición poco natural sobre el mástil."
+      ],
+      "tips": [
+        "En escenas con multitudes, mirá las caras del fondo: la IA suele deformarlas.",
+        "Seguí las cuerdas de instrumentos y los cables: suelen cortarse o duplicarse.",
+        "Una estética de 'portada de disco' extrema es frecuente en imágenes generadas."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Thrash_metal_guitarist.jpg",
+      "author": "Bing AI, prompted by me. Prompt: \"Thrash metal guitarist\"",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "Bing Image Creator (Microsoft, basado en DALL·E 3)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    },
+    {
+      "id": "q035",
+      "file": "assets/images/bank/5815d446d45a.jpg",
+      "classification": "REAL",
+      "category": "objects",
+      "difficulty": "medium",
+      "title": "Granos de café tostado",
+      "context": "Primer plano de granos de café tostado, publicado en Wikimedia Commons por MarkSweep y liberado al dominio público.",
+      "explanation": "Es una fotografía real de dominio público. Aunque parece una textura repetitiva, cada grano tiene un tamaño, un tono de tostado y una hendidura central distintos, con brillos de aceite que varían según la orientación de cada uno respecto de la luz.",
+      "features": [
+        "Hendidura central de cada grano con forma ligeramente diferente.",
+        "Variaciones de color entre granos más y menos tostados.",
+        "Brillo de aceite natural que cambia según la orientación.",
+        "Profundidad de campo reducida: los granos lejanos se desenfocan gradualmente."
+      ],
+      "tips": [
+        "En texturas repetitivas, buscá elementos 'clonados' o que se fusionan: son señales de IA.",
+        "Observá cómo cambia el brillo de cada objeto según su ángulo con la luz.",
+        "Las imágenes de dominio público en archivos confiables tienen historial de publicación."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Roasted_coffee_beans.jpg",
+      "author": "MarkSweep",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "id": "q036",
+      "file": "assets/images/bank/a65522b97f80.jpg",
+      "classification": "IA",
+      "category": "cities",
+      "difficulty": "medium",
+      "title": "Hotel sobre los acantilados",
+      "context": "Imagen publicada por Dennis Sylvester Hurd en Flickr como parte de un diario sobre 'los poderes de la IA', con las etiquetas «ai-generated image», «artificial intelligence» y «virtual photography».",
+      "explanation": "Su autor la etiquetó como imagen generada por IA y la publicó en una serie dedicada a mostrar lo que puede hacer la inteligencia artificial. Recuerda a la costa italiana, pero el edificio mezcla estilos arquitectónicos sin una estructura lógica, los autos antiguos estacionados son pequeños y poco definidos, y la vegetación cubre la fachada como si estuviera 'pintada'.",
+      "features": [
+        "Edificio con torres, balcones y ventanas sin una lógica constructiva clara.",
+        "Autos antiguos diminutos con formas indefinidas.",
+        "Vegetación con flores que se funden con la fachada.",
+        "Costa y pueblo del fondo sin detalles identificables."
+      ],
+      "tips": [
+        "Si una imagen dice mostrar un lugar real, buscá ese hotel o paisaje en mapas.",
+        "La arquitectura generada combina estilos que no conviven en un mismo edificio.",
+        "Las etiquetas y descripciones de la publicación original son pistas valiosas."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Hotel_on_the_Coast_-_Flickr_-_Dennis_S._Hurd.jpg",
+      "author": "Dennis Sylvester Hurd",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "ai_tool": "No especificada por el autor (etiquetada como «ai-generated image» y «virtual photography» en Flickr)",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 994
+    },
+    {
+      "id": "q037",
+      "file": "assets/images/bank/e3b6ae6cf1c6.jpg",
+      "classification": "IA",
+      "category": "objects",
+      "difficulty": "hard",
+      "title": "Corona de flores con moño negro",
+      "context": "Imagen de una pequeña corona conmemorativa sobre una mesa. Su autor indica en Wikimedia Commons que la creó con Poe.com y que no recuerda qué software de IA eligió la plataforma.",
+      "explanation": "El propio autor declara que la imagen fue creada con un generador de IA a través de Poe.com. Es muy creíble como foto de producto, pero las flores blancas tienen pétalos casi idénticos, el moño negro tiene una forma algo rígida y simétrica, y la corona no proyecta una sombra clara sobre la superficie dorada.",
+      "features": [
+        "Flores con pétalos y tamaños casi idénticos entre sí.",
+        "Moño negro rígido y demasiado simétrico.",
+        "Ramas de pino que se repiten con el mismo patrón.",
+        "Sombra de contacto muy débil sobre la mesa."
+      ],
+      "tips": [
+        "Revisá las sombras debajo de los objetos: deben 'anclarlos' a la superficie.",
+        "Las flores reales tienen pétalos dañados, desiguales o marchitos.",
+        "Cuando la declaración del autor es vaga, buscá otros indicios en la publicación."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Memorial_Wreath.jpg",
+      "author": "I used Poe.com -- I cannot remember the specific AI software it chose for me - it was an AI image software.",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": "Generador de imágenes disponible en Poe.com (el autor no recuerda el modelo exacto)",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 960
+    },
+    {
+      "id": "q038",
+      "file": "assets/images/bank/f4a2ddb2aa91.jpg",
+      "classification": "IA",
+      "category": "cities",
+      "difficulty": "medium",
+      "title": "Navidad nevada en el Arco del Triunfo",
+      "context": "Vista aérea de la plaza del Arco del Triunfo (París) nevada y decorada para Navidad. El autor publicó el prompt completo: «Christmas at Champs Elysee, Arc de Triomphe in the background, people walking, all decorated for Christmas 2023, late afternoon, snow, long exposure, twilight, drone shot».",
+      "explanation": "Según la página del archivo en Wikimedia Commons, el autor la generó con IA y publicó el prompt completo, que usa parámetros exclusivos de Midjourney. Imita una foto de dron de un lugar real, pero la plaza no coincide con la verdadera: las avenidas que salen de la Étoile no están donde deberían, aparecen 'casetas' y pistas que no existen y el monumento está deformado y fuera de escala.",
+      "features": [
+        "Trazado de calles que no coincide con la plaza Charles de Gaulle real.",
+        "Estructuras navideñas y caminos curvos inventados.",
+        "Arco con proporciones y relieves deformados.",
+        "Personas y autos diminutos sin forma definida."
+      ],
+      "tips": [
+        "Cuando una imagen muestra un lugar famoso, compará con mapas o fotos verificadas: la IA inventa la geografía.",
+        "Las 'fotos de dron' generadas suelen tener calles que no llevan a ningún lado.",
+        "Las fechas en el prompt ('Christmas 2023') no significan que el evento haya ocurrido."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Christmas_at_Arc_de_Triomphe_2023.png",
+      "author": "Sérgio Valle Duarte",
+      "license": "CC BY 3.0",
+      "license_url": "https://creativecommons.org/licenses/by/3.0",
+      "ai_tool": "Midjourney (el prompt incluye parámetros propios de Midjourney: --ar, --q, --s, --iw)",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "id": "q039",
+      "file": "assets/images/bank/d3e3e38a3aea.jpg",
+      "classification": "REAL",
+      "category": "everyday",
+      "difficulty": "hard",
+      "title": "Abuela cocinando en una cocina tradicional nepalí",
+      "context": "Una abuela nepalí prepara comida en una cocina tradicional, iluminada por el fuego. Foto original de Mithun Kunwar (10 de abril de 2020), con una versión editada (corrección de color y encuadre) realizada por el usuario Radomianin.",
+      "explanation": "Fotografía real; la versión publicada fue editada por otro usuario de Wikimedia Commons, que dejó registrada la obra original y los cambios. La luz rojiza y la atmósfera dramática pueden parecer artificiales, pero vienen del fuego y de la edición de color. Los utensilios colgados, las vasijas de barro y el humo tienen formas coherentes y se ven desgastados por el uso.",
+      "features": [
+        "Única fuente de luz (el fuego) que ilumina la escena desde abajo de forma coherente.",
+        "Utensilios metálicos colgados con reflejos del fuego.",
+        "Vasijas de barro con formas y tamaños distintos.",
+        "Paredes de barro con grietas y manchas de hollín."
+      ],
+      "tips": [
+        "Edición no es lo mismo que generación: una foto real retocada sigue siendo una foto real.",
+        "Seguí la luz: en una escena iluminada por un fuego, las sombras deben alejarse de él.",
+        "Las obras derivadas en archivos confiables indican quién hizo la foto original y quién la editó."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Grandmother_preparing_food_inside_traditional_kitchen_%28edited%29.jpg",
+      "author": "Original: Mithun Kunwar Derivative work: Radomianin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 914
+    },
+    {
+      "id": "q040",
+      "file": "assets/images/bank/b557e8a21cb9.jpg",
+      "classification": "REAL",
+      "category": "landscapes",
+      "difficulty": "hard",
+      "title": "Rayos crepusculares en Namibia",
+      "context": "Rayos crepusculares al atardecer cerca de la meseta de Waterberg (Wabi Game Ranch, Namibia), fotografiados el 22 de octubre de 2011 por Alchemist-hp.",
+      "explanation": "Fotografía real publicada con fecha y lugar. Los rayos de luz que salen 'en abanico' desde detrás de las nubes parecen un efecto artificial, pero son un fenómeno atmosférico real llamado rayos crepusculares: sombras de las nubes proyectadas sobre el aire cargado de polvo.",
+      "features": [
+        "Rayos crepusculares que convergen hacia el sol oculto, como indica la perspectiva.",
+        "Camino de tierra con huellas de vehículos coherentes.",
+        "Vegetación seca de sabana africana, típica de la región.",
+        "Colores intensos del atardecer, que también pueden lograrse con edición fotográfica."
+      ],
+      "tips": [
+        "Muchos fenómenos atmosféricos reales (rayos, halos, auroras) parecen efectos especiales.",
+        "Que una imagen esté editada (más saturación o contraste) no significa que sea generada por IA.",
+        "Buscá el nombre del fenómeno: si existe, encontrarás otras fotos similares documentadas."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Crepuscular_rays_at_Sunset_near_Waterberg_Plateau.jpg",
+      "author": "Alchemist-hp (www.pse-mendelejew.de)",
+      "license": "FAL",
+      "license_url": "http://artlibre.org/licence/lal/en",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q041",
+      "file": "assets/images/bank/c78e8567d9d0.jpg",
+      "classification": "IA",
+      "category": "surreal",
+      "difficulty": "medium",
+      "title": "Excavación de un cráneo gigante",
+      "context": "Imagen generada con Midjourney y descrita por su autor como «foto falsa de la excavación de un esqueleto gigante». Las supuestas fotos de 'gigantes' son un engaño clásico de internet.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, se trata de una 'foto falsa' creada con Midjourney, y así lo declara su autor. Busca imitar un hallazgo arqueológico, pero el cráneo no tiene proporciones humanas creíbles, varias personas tienen caras muy parecidas entre sí, y nadie usa las herramientas ni la indumentaria de una excavación real.",
+      "features": [
+        "Cráneo con proporciones y dientes poco anatómicos.",
+        "Personas con rostros y peinados muy similares entre sí.",
+        "Manos que se apoyan en la tierra sin herramientas de excavación.",
+        "Iluminación cinematográfica y fondo con desenfoque artificial."
+      ],
+      "tips": [
+        "Los 'hallazgos increíbles' sin fuente científica son una señal de alerta.",
+        "Buscá si el descubrimiento aparece en medios o publicaciones confiables.",
+        "Revisá si las personas de un grupo parecen 'clonadas'."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Fake_excavation_of_a_giant_skeleton%2C_MidJourney_AI.png",
+      "author": "MidJourney AI",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0",
+      "ai_tool": "Midjourney",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "id": "q042",
+      "file": "assets/images/bank/23bf230042ab.jpg",
+      "classification": "IA",
+      "category": "food",
+      "difficulty": "medium",
+      "title": "Plato de pollo grillado con ensalada",
+      "context": "Imagen publicada por Dennis Sylvester Hurd en Flickr bajo el título «Generative AI can be used to create realistic images of food dishes», creada para ilustrar una entrada de su blog. El archivo en Wikimedia Commons está categorizado como imagen de Midjourney.",
+      "explanation": "El autor publicó la imagen indicando explícitamente que fue creada con IA generativa (así se titula el archivo) para su blog. Visualmente es muy convincente, pero el pollo tiene marcas de grill perfectamente paralelas en todos los trozos, las hierbas y la salsa blanca se distribuyen como un patrón y los objetos del fondo (frascos y bebidas) no tienen forma ni etiqueta definidas.",
+      "features": [
+        "Marcas de parrilla idénticas y paralelas en todos los trozos.",
+        "Hierbas y salsa repartidas de forma demasiado pareja.",
+        "Frascos y bebidas del fondo sin etiquetas ni bordes claros.",
+        "Iluminación publicitaria dramática sobre un fondo casi negro."
+      ],
+      "tips": [
+        "La comida generada suele verse 'demasiado perfecta' y brillante.",
+        "Mirá los objetos del fondo: la IA les presta menos atención.",
+        "El título o la descripción original de una imagen pueden revelar su origen."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Generative_AI_can_be_used_to_create_realistic_images_of_food_dishes.jpg",
+      "author": "Dennis Sylvester Hurd",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "Midjourney (según la categoría del archivo en Commons; el autor no especifica la herramienta)",
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 640
+    },
+    {
+      "id": "q043",
+      "file": "assets/images/bank/cd57d19be421.jpg",
+      "classification": "REAL",
+      "category": "cities",
+      "difficulty": "hard",
+      "title": "Nueva York de noche en HDR",
+      "context": "Vista nocturna de Manhattan hacia el este por la calle 45 Oeste, fotografiada el 31 de agosto de 2006 por Paulo Barcellos Jr. con la técnica HDR (varias exposiciones combinadas).",
+      "explanation": "Es una fotografía real, aunque procesada con la técnica HDR (alto rango dinámico): se combinan varias tomas con distinta exposición para mostrar detalles en zonas oscuras y luminosas a la vez. Ese procesamiento le da un aspecto de 'render' o de videojuego que confunde a muchas personas, pero los edificios, carteles y calles corresponden a lugares reales de Manhattan.",
+      "features": [
+        "Aspecto 'pictórico' producido por la combinación de exposiciones HDR.",
+        "Edificios reales y reconocibles del skyline de Manhattan.",
+        "Calles con estelas de luz de autos por la exposición larga.",
+        "Detalles visibles a la vez en sombras y en luces intensas."
+      ],
+      "tips": [
+        "El HDR, los filtros y la edición pueden hacer que una foto real parezca artificial.",
+        "Compará el skyline o los edificios con fotos de la misma ciudad.",
+        "La fecha de la imagen ayuda: en 2006 no existían generadores de imágenes como los actuales."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:New_York_City_at_night_HDR.jpg",
+      "author": "Paulo Barcellos Jr.",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 846
+    },
+    {
+      "id": "q044",
+      "file": "assets/images/bank/f435fac41500.jpg",
+      "classification": "REAL",
+      "category": "everyday",
+      "difficulty": "medium",
+      "title": "Chico arando con un tractor al atardecer",
+      "context": "Un chico vestido de rojo guía un tractor de mano para arar un arrozal al atardecer en Don Det (Laos). Fotografía de Basile Morin del 31 de mayo de 2018.",
+      "explanation": "Fotografía real documentada con fecha y lugar. El tractor de dos ruedas (muy común en el sudeste asiático) tiene una mecánica coherente: motor, manillares largos y ruedas de hierro con barro acumulado. Los terrones de tierra removida tienen sombras que coinciden con la luz baja del sol.",
+      "features": [
+        "Tractor de mano con piezas mecánicas coherentes y barro real.",
+        "Terrones de tierra con sombras alargadas por el sol bajo.",
+        "Postura del chico creíble para guiar la máquina.",
+        "Árboles del fondo con formas variadas y naturales."
+      ],
+      "tips": [
+        "Las máquinas y herramientas son difíciles para la IA: revisá que cada pieza tenga función.",
+        "El barro y la suciedad suelen estar ausentes o 'limpios' en las imágenes generadas.",
+        "Verificá si el tipo de maquinaria corresponde al país o región declarada."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Boy_plowing_with_a_tractor_at_sunset_in_Don_Det%2C_Laos.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "id": "q045",
+      "file": "assets/images/bank/7042769ffc97.jpg",
+      "classification": "REAL",
+      "category": "animals",
+      "difficulty": "medium",
+      "title": "Cuatro perros corriendo en el campo",
+      "context": "Cuatro perros trotan por un campo de Don Det (Si Phan Don, Laos) a la hora dorada, con casas de madera y nubes de tormenta al fondo. Fotografía de Basile Morin del 2 de julio de 2020.",
+      "explanation": "Fotografía real publicada con fecha, hora y lugar. Los perros son pequeños en el encuadre pero cada uno tiene una postura de carrera distinta y una sombra alargada coherente con el sol bajo; las casas del fondo tienen estructuras simples y lógicas.",
+      "features": [
+        "Cuatro perros con posturas y colores distintos, no repetidos.",
+        "Sombras largas en la misma dirección por la luz baja del atardecer.",
+        "Casas de madera con techos y pilotes coherentes.",
+        "Nubes con iluminación que coincide con la posición del sol."
+      ],
+      "tips": [
+        "En imágenes con varios animales, la IA a veces repite el mismo animal o mezcla patas.",
+        "Mirá las sombras de los sujetos pequeños: deben acompañar la dirección de la luz.",
+        "Las estructuras del fondo (casas, cercas) revelan errores de la IA con frecuencia."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Four_dogs_running_at_golden_hour_in_the_countryside_of_Don_Det_Laos.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q046",
+      "file": "assets/images/bank/5e167e3e9bfa.jpg",
+      "classification": "IA",
+      "category": "animals",
+      "difficulty": "medium",
+      "title": "Erizo sobre un tronco",
+      "context": "Primer plano de un erizo generado con el modelo FLUX.1 [schnell] a partir de la indicación «Close-up shot of a hedgehog» y publicado en el dominio público.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, la generó el modelo FLUX.1 [schnell]. El resultado es muy fotográfico, pero el animal tiene rasgos 'de peluche': ojos grandes y brillantes, una cara blanca y esponjosa sin textura de piel y púas demasiado ordenadas. El fondo muestra una especie de reja o estructura sin forma clara.",
+      "features": [
+        "Púas distribuidas de forma demasiado regular, como peinadas.",
+        "Cara blanca esponjosa sin la textura real del hocico de un erizo.",
+        "Ojos grandes y brillantes que exageran la ternura.",
+        "Estructura del fondo indefinida, a medio camino entre reja y tronco."
+      ],
+      "tips": [
+        "La IA tiende a 'embellecer' animales: ojos más grandes, pelaje más limpio, expresiones tiernas.",
+        "Compará con fotos documentadas de la misma especie.",
+        "Los objetos borrosos del fondo suelen revelar formas sin sentido."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cute_Hedgehog.jpg",
+      "author": "FLUX.1 [schnell]; prompted by Emdosis",
+      "license": "Dominio público",
+      "license_url": null,
+      "ai_tool": "FLUX.1 [schnell] (Black Forest Labs)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 747
+    },
+    {
+      "id": "q047",
+      "file": "assets/images/bank/762fd3143f3a.jpg",
+      "classification": "REAL",
+      "category": "landscapes",
+      "difficulty": "medium",
+      "title": "Campo de amapolas cerca del observatorio Cheomseongdae",
+      "context": "Campo de amapolas de Islandia junto al observatorio astronómico Cheomseongdae, en Gyeongju (Corea del Sur), fotografiado el 11 de junio de 2024 por Basile Morin. El autor indica que es una imagen de apilamiento de foco (4 tomas combinadas).",
+      "explanation": "Fotografía real: el autor documenta incluso la técnica utilizada (apilamiento de enfoque de 4 fotos para que todo el campo salga nítido). La torre de piedra del fondo es el observatorio Cheomseongdae, un monumento real del siglo VII que puede verificarse.",
+      "features": [
+        "Monumento histórico identificable en el fondo (observatorio Cheomseongdae).",
+        "Flores de distintos colores, tamaños y orientaciones.",
+        "Abejas sobre algunas flores, mencionadas en la descripción del autor.",
+        "Nitidez extendida explicada por la técnica de apilamiento de foco."
+      ],
+      "tips": [
+        "Un monumento reconocible permite comprobar si la escena coincide con el lugar real.",
+        "Técnicas como el apilamiento de foco o el HDR modifican la foto, pero no la vuelven 'IA'.",
+        "Leé la descripción del autor: muchas veces explica cómo se tomó la imagen."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Field_of_Iceland_poppies_in_the_flower_garden_near_Cheomseongdae_Observatory_in_Gyeongju_South_Korea.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 856
+    },
+    {
+      "id": "q048",
+      "file": "assets/images/bank/948042c3d5ff.jpg",
+      "classification": "IA",
+      "category": "cities",
+      "difficulty": "hard",
+      "title": "Casetas de playa en Italia",
+      "context": "Imagen generada con Gemini a partir del prompt «iconic italian beach cabins 1980», según el archivo en Wikimedia Commons, donde figura como obra de un algoritmo sin autoría humana.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, fue generada con Gemini con la indicación «iconic italian beach cabins 1980». Es muy realista y hasta incluye textos casi correctos, pero con errores reveladores: un cartel dice «DOCE CABINE» en lugar de «DOCCE» (duchas en italiano), la numeración de las zonas es incoherente y las sombrillas muestran nombres de marcas mezclados.",
+      "features": [
+        "Cartel con un error de ortografía: «DOCE» en lugar de «DOCCE».",
+        "Numeración incoherente: «ZONA 48» junto a «ZONA 45-60» y un «47» suelto.",
+        "Casetas con proporciones y puertas casi idénticas.",
+        "Personas del fondo diminutas e indefinidas."
+      ],
+      "tips": [
+        "Los generadores actuales escriben mejor, pero aún cometen errores sutiles de ortografía: leé con atención.",
+        "Revisá si los números y señales siguen una lógica (orden, numeración).",
+        "Un estilo 'de los años 80' puede imitarse: verificá la fecha y la fuente."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Cabine_balneari.jpg",
+      "author": "gemini",
+      "license": "CC BY-SA 3.0 it",
+      "license_url": "https://creativecommons.org/licenses/by-sa/3.0/it/deed.en",
+      "ai_tool": "Gemini (Google)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 524
+    },
+    {
+      "id": "q049",
+      "file": "assets/images/bank/613da219b0b6.jpg",
+      "classification": "REAL",
+      "category": "surreal",
+      "difficulty": "hard",
+      "title": "Reflejo de un niño alimentando a una vaca",
+      "context": "Un niño le da paja a una vaca en un arrozal inundado de Si Phan Don (Laos), y ambos se reflejan en el agua. Fotografía de Basile Morin del 12 de julio de 2024, a la hora dorada.",
+      "explanation": "Es una fotografía real, aunque la simetría casi perfecta entre la escena y su reflejo le da un aire irreal. El reflejo no es una copia exacta: está ligeramente desplazado por la perspectiva, interrumpido por brotes de arroz y ondas, y muestra la parte inferior de los cuerpos como corresponde a un espejo de agua.",
+      "features": [
+        "Reflejo con la perspectiva correcta (se ve la parte inferior de los cuerpos).",
+        "Brotes de arroz y pequeñas ondas que interrumpen el reflejo.",
+        "Paja entre la mano del niño y la boca de la vaca con continuidad física.",
+        "Patas de la vaca y piernas del niño correctamente apoyadas en el borde del arrozal."
+      ],
+      "tips": [
+        "Un reflejo real no es un 'copiar y pegar' invertido: cambia según el punto de vista.",
+        "Mirá dónde se apoyan los pies y las patas: la IA suele dejarlos flotando o hundidos.",
+        "La simetría llamativa es una elección de composición del fotógrafo, no una prueba de IA."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Water_reflection_of_a_boy_feeding_hay_to_a_cow_in_a_paddy_field_at_golden_hour_in_Laos.jpg",
+      "author": "Basile Morin",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "ai_tool": null,
+      "added_at": "2026-11-16",
+      "width": 1280,
+      "height": 853
+    },
+    {
+      "id": "q050",
+      "file": "assets/images/bank/80f9d5b2bb09.jpg",
+      "classification": "IA",
+      "category": "objects",
+      "difficulty": "easy",
+      "title": "Rey de ajedrez dorado sobre un tablero",
+      "context": "Imagen de un rey de ajedrez dorado sobre un pequeño tablero flotante, generada con ChatGPT y publicada en Wikimedia Commons con licencia CC0.",
+      "explanation": "Según la página del archivo en Wikimedia Commons, el autor la generó con ChatGPT. El tablero tiene una perspectiva de ilustración (isométrica) y flota sobre un fondo vacío, y sus casillas no son un tablero real de 8×8: hay muy pocas filas y columnas. La pieza tiene el brillo y la limpieza de un render digital, sin polvo, rayones ni sombra de contacto realista.",
+      "features": [
+        "Tablero con muy pocas casillas: no es un tablero de ajedrez completo.",
+        "Perspectiva isométrica, propia de ilustraciones y no de una cámara.",
+        "Sombra de contacto mínima y genérica.",
+        "Brillo dorado perfecto, sin marcas de uso."
+      ],
+      "tips": [
+        "Contá: tableros, teclados, dedos o ventanas suelen tener un número incorrecto de elementos.",
+        "Una perspectiva 'de dibujo técnico' no se obtiene con una cámara común.",
+        "Los objetos reales tienen polvo, marcas y pequeños defectos."
+      ],
+      "source": "Wikimedia Commons",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Golden_king_on_a_chessboard.png",
+      "author": "ChatGPT",
+      "license": "CC0",
+      "license_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "ai_tool": "ChatGPT (generación de imágenes de OpenAI)",
+      "added_at": "2026-11-16",
+      "width": 960,
+      "height": 960
+    }
+  ]
+}

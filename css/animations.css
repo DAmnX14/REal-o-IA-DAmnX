@@ -1,0 +1,45 @@
+/* =====================================================================
+   REAL OR AI — Animaciones
+   ===================================================================== */
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes screenIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+@keyframes scan { from { top: -30%; } to { top: 100%; } }
+@keyframes tickPulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.18); } }
+@keyframes toastIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes toastOut { to { opacity: 0; transform: translateY(12px); } }
+@keyframes floatUp {
+  0% { opacity: 0; transform: translate(-50%, -30%) scale(.7); }
+  15% { opacity: 1; transform: translate(-50%, -60%) scale(1.15); }
+  100% { opacity: 0; transform: translate(-50%, -260%) scale(1); }
+}
+@keyframes enter { from { opacity: 0; transform: scale(.97); filter: blur(6px); } to { opacity: 1; transform: none; filter: none; } }
+@keyframes bump { 0% { transform: scale(1); } 40% { transform: scale(1.3); } 100% { transform: scale(1); } }
+@keyframes shake { 10%, 90% { transform: translateX(-2px); } 20%, 80% { transform: translateX(4px); } 30%, 50%, 70% { transform: translateX(-8px); } 40%, 60% { transform: translateX(8px); } }
+@keyframes glowCorrect { 0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, .7); } 100% { box-shadow: 0 0 0 26px rgba(34, 197, 94, 0); } }
+@keyframes flashShow { 0% { opacity: 0; transform: scale(.7); } 20% { opacity: 1; transform: scale(1.05); } 80% { opacity: 1; transform: scale(1); } 100% { opacity: 0; transform: scale(.96); } }
+@keyframes bannerShow { 0% { opacity: 0; transform: translate(-50%, -20px) scale(.8); } 15% { opacity: 1; transform: translate(-50%, 0) scale(1.05); } 85% { opacity: 1; transform: translate(-50%, 0) scale(1); } 100% { opacity: 0; transform: translate(-50%, -10px); } }
+@keyframes labelFlip { 0% { transform: translateX(-50%) rotateX(90deg); opacity: 0; } 100% { transform: translateX(-50%) rotateX(0); opacity: 1; } }
+@keyframes logoGlow { 0%, 100% { filter: drop-shadow(0 0 22px rgba(139, 92, 246, .3)); } 50% { filter: drop-shadow(0 0 38px rgba(59, 130, 246, .5)); } }
+
+.stage.enter img { animation: enter .45s ease both; }
+.stage.is-correct { animation: glowCorrect .8s ease-out; }
+.stage.is-wrong { animation: shake .45s ease; }
+.bump { animation: bump .45s ease; }
+.shake { animation: shake .45s ease; }
+.answer-flash.show { animation: flashShow 1s ease forwards; }
+.streak-banner.show { animation: bannerShow 1.8s ease forwards; }
+.intro-label.flip { animation: labelFlip .5s ease; }
+.logo-title { animation: logoGlow 5s ease-in-out infinite; }
+.home-actions .btn-primary { position: relative; overflow: hidden; }
+.home-actions .btn-primary::before {
+  content: ''; position: absolute; inset: 0; transform: translateX(-120%);
+  background: linear-gradient(110deg, transparent 30%, rgba(255, 255, 255, .35), transparent 70%);
+  animation: shine 3.5s ease-in-out infinite;
+}
+@keyframes shine { 0%, 60% { transform: translateX(-120%); } 100% { transform: translateX(120%); } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .scanline { display: none; }
+}
