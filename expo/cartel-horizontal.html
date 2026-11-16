@@ -1,0 +1,76 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><style>
+@font-face { font-family: 'InterL'; src: local('Inter'); }
+* { box-sizing: border-box; margin: 0; }
+body { width: 1600px; height: 900px; overflow: hidden; font-family: 'Inter', 'DejaVu Sans', sans-serif; color: #eef0ff;
+  background: radial-gradient(900px 700px at 85% 0%, #3b1d8f 0%, transparent 60%), radial-gradient(800px 700px at 0% 100%, #0b3d7a 0%, transparent 60%), radial-gradient(600px 500px at 100% 100%, #6b1757 0%, transparent 60%), #070a1a; position: relative; }
+.grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(139,92,246,.10) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,.10) 1px, transparent 1px); background-size: 40px 40px; -webkit-mask-image: radial-gradient(ellipse at center, #000 35%, transparent 80%); }
+.floor { position: absolute; left: -50%; right: -50%; bottom: -6%; height: 34%; background-image: linear-gradient(rgba(34,211,238,.45) 1px, transparent 1px), linear-gradient(90deg, rgba(167,139,250,.45) 1px, transparent 1px); background-size: 48px 48px; transform: perspective(380px) rotateX(62deg); transform-origin: bottom; -webkit-mask-image: linear-gradient(to top, #000, transparent 85%); }
+.glow { position: absolute; border-radius: 50%; filter: blur(70px); opacity: .55; }
+.g1 { width: 420px; height: 420px; background: #8b5cf6; top: -120px; left: -100px; }
+.g2 { width: 380px; height: 380px; background: #22d3ee; bottom: 120px; right: -140px; opacity: .35; }
+.wrap { position: relative; z-index: 2; height: 100%; display: flex; }
+.grad { background: linear-gradient(120deg, #a78bfa, #3b82f6 45%, #22d3ee 70%, #f472b6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.brand { display: flex; align-items: center; gap: 14px; }
+.brand svg { width: 64px; height: 64px; }
+.kicker { font-weight: 700; letter-spacing: .28em; font-size: 15px; color: #22d3ee; text-transform: uppercase; }
+h1 { font-weight: 800; letter-spacing: .01em; line-height: .95; color: #fff; filter: drop-shadow(0 0 30px rgba(139,92,246,.55)); }
+h1 em { font-style: italic; }
+.slogan { color: #c7cbef; }
+.qrcard { background: #fff; border-radius: 28px; padding: 6px; box-shadow: 0 0 0 4px rgba(167,139,250,.9), 0 0 0 10px rgba(34,211,238,.35), 0 0 70px rgba(139,92,246,.7); position: relative; }
+.qrcard .qrimg { display: block; width: 100%; height: auto; image-rendering: pixelated; }
+.qrcard .corner { position: absolute; width: 38px; height: 38px; border: 5px solid #22d3ee; }
+.c1 { top: -16px; left: -16px; border-right: 0; border-bottom: 0; border-radius: 12px 0 0 0; }
+.c2 { top: -16px; right: -16px; border-left: 0; border-bottom: 0; border-radius: 0 12px 0 0; }
+.c3 { bottom: -16px; left: -16px; border-right: 0; border-top: 0; border-radius: 0 0 0 12px; }
+.c4 { bottom: -16px; right: -16px; border-left: 0; border-top: 0; border-radius: 0 0 12px 0; }
+.scan { font-weight: 800; letter-spacing: .04em; color: #fff; }
+.url { font-family: 'DejaVu Sans Mono', monospace; color: #a5f3fc; background: rgba(7,10,26,.7); border: 1px solid rgba(34,211,238,.45); border-radius: 999px; padding: 8px 18px; display: inline-block; }
+.thumbs { display: grid; gap: 12px; }
+.thumb { position: relative; border-radius: 16px; overflow: hidden; border: 2px solid rgba(167,139,250,.5); box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb span { position: absolute; left: 50%; bottom: 8px; transform: translateX(-50%); background: rgba(7,10,26,.82); border: 1px solid rgba(255,255,255,.3); border-radius: 999px; padding: 3px 12px; font-weight: 800; font-size: 13px; letter-spacing: .08em; white-space: nowrap; }
+.pills { display: flex; flex-wrap: wrap; gap: 10px; }
+.pill { padding: 8px 16px; border-radius: 999px; font-weight: 700; font-size: 16px; background: rgba(139,92,246,.18); border: 1px solid rgba(167,139,250,.5); }
+.foot { color: #9aa0c8; font-size: 14px; }
+.foot b { font-weight: 800; }
+.foot sup { font-size: .65em; }
+
+.wrap { flex-direction: row; align-items: center; gap: 70px; padding: 60px 90px 50px; }
+.left { flex: 1.25; display: flex; flex-direction: column; }
+.right { flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
+.kicker { margin-top: 20px; }
+h1 { font-size: 120px; margin-top: 10px; }
+.slogan { font-size: 30px; margin-top: 16px; }
+.thumbs { grid-template-columns: repeat(4, 1fr); margin-top: 34px; }
+.thumb { aspect-ratio: 1 / 1; }
+.pills { margin-top: 28px; }
+.foot { margin-top: 30px; }
+.qrcard { width: 400px; }
+.scan { font-size: 40px; margin-top: 36px; }
+.url { font-size: 18px; margin-top: 14px; }
+</style></head><body><div class="grid"></div><div class="floor"></div><div class="glow g1"></div><div class="glow g2"></div>
+<div class="wrap">
+  <div class="left">
+    <div class="brand"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="REAL OR AI">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset=".55" stop-color="#3b82f6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+  <rect x="3" y="3" width="58" height="58" rx="16" fill="#0c1130" stroke="url(#g)" stroke-width="3"/>
+  <path d="M32 18c-9 0-16.5 6.2-20 14 3.5 7.8 11 14 20 14s16.5-6.2 20-14c-3.5-7.8-11-14-20-14z" fill="none" stroke="url(#g)" stroke-width="3.2" stroke-linejoin="round"/>
+  <circle cx="32" cy="32" r="7.5" fill="url(#g)"/>
+  <path d="M32 24.5v15" stroke="#0c1130" stroke-width="2.4"/>
+  <circle cx="35" cy="29" r="1.6" fill="#fff"/>
+  <path d="M10 10h6M10 10v6M54 10h-6M54 10v6M10 54h6M10 54v-6M54 54h-6M54 54v-6" stroke="#22d3ee" stroke-width="2.2" stroke-linecap="round"/>
+</svg>
+</div>
+    <div class="kicker">Juego educativo · Expo</div>
+    <h1>REAL <em class="grad">OR</em> AI</h1>
+    <p class="slogan">¿Podés distinguir lo real de lo artificial?</p>
+    <div class="thumbs"><div class="thumb"><img src="../assets/images/bank/b6c5f7f6ca35.jpg"><span>¿REAL o IA?</span></div><div class="thumb"><img src="../assets/images/bank/5e167e3e9bfa.jpg"><span>¿REAL o IA?</span></div><div class="thumb"><img src="../assets/images/bank/a3cbd000150f.jpg"><span>¿REAL o IA?</span></div><div class="thumb"><img src="../assets/images/bank/21543d364fa9.jpg"><span>¿REAL o IA?</span></div></div>
+    <div class="pills"><span class="pill">🎯 10 imágenes</span><span class="pill">⏱️ 15 segundos</span><span class="pill">🎓 Aprendé a detectar IA</span><span class="pill">🏆 Ranking global</span></div>
+    <p class="foot">© 2026 <b class="grad">ArceTech</b><sup>®</sup> · Todos los derechos reservados</p>
+  </div>
+  <div class="right">
+    <div class="qrcard"><img class="qrimg" src="qr-real-or-ai.png" alt="Código QR"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i class="corner c4"></i></div>
+    <div class="scan">📱 ESCANEÁ Y JUGÁ</div>
+    <div class="url">damnx14.github.io/REal-o-IA-DAmnX</div>
+  </div>
+</div></body></html>
