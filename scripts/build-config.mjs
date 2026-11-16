@@ -13,6 +13,12 @@ const url = (process.env.SUPABASE_URL || '').trim();
 const key = (process.env.SUPABASE_ANON_KEY || '').trim();
 const fallback = process.env.OFFLINE_FALLBACK !== 'false';
 
+// Sin variables de entorno se conserva el js/config.js del repositorio (no se pisa con valores vacíos).
+if (!url && !key) {
+  console.log('SUPABASE_URL/SUPABASE_ANON_KEY no definidas: se conserva js/config.js tal como está.');
+  process.exit(0);
+}
+
 if (url && !/^https:\/\/[a-z0-9.-]+$/i.test(url.replace(/\/$/, ''))) {
   console.error('SUPABASE_URL inválida (debe ser https://<proyecto>.supabase.co).');
   process.exit(1);
